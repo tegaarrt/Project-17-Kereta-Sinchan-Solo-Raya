@@ -701,7 +701,7 @@ def pembayaran():
 
 image_path = r'Kereta Sinchan Home Page.png'
 original_image = Image.open(image_path)
-resized_image = original_image.resize((1200, 600), Image.Resampling.LANCZOS)
+resized_image = original_image.resize((1200, 650), Image.Resampling.LANCZOS)
 im = ImageTk.PhotoImage(resized_image)
 
 i = Label(root, image=im)
@@ -709,17 +709,17 @@ i.image = im
 i.place(x=0, y=50) 
 
 # Modify the buttons to include an icon image
-button_continue = Button(root, text="Booking Tiket", bg='cyan', font=("Arial", 12), compound="left", command=starter)
-button_continue.place(x=100, y=500, width=150, height=50) 
+button_continue = Button(root, text="Booking Tiket", bg='orange', font=("Arial", 12), compound="left", command=starter)
+button_continue.place(x=220, y=290, width=150, height=50) 
 
-b = Button(root, text="Pilih Kelas", bg='azure', font=("Arial", 12), compound="left", command=kelas)
-b.place(x=300, y=500, width=150, height=50)  
+b = Button(root, text="Pilih Kelas", bg='light green', font=("Arial", 12), compound="left", command=kelas)
+b.place(x=420, y=290, width=150, height=50)  
 
-b1 = Button(root, text="Pembayaran", bg='yellow', font=("Arial", 12), compound="left", command=pembayaran)
-b1.place(x=500, y=500, width=150, height=50)  
+b1 = Button(root, text="Pembayaran", bg='light blue', font=("Arial", 12), compound="left", command=pembayaran)
+b1.place(x=620, y=290, width=150, height=50)  
 
 button_quit = Button(root, text='EXIT', bg='red', font=("Arial", 12), compound="left", command=root.quit)
-button_quit.place(x=700, y=500, width=150, height=50)  
+button_quit.place(x=820, y=290, width=150, height=50)  
 
 root.mainloop()
 
