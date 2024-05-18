@@ -699,7 +699,7 @@ def kelas():
 def pembayaran():
     print("Pembayaran")
 
-image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\kereta sinchan.png'
+image_path = r'Kereta Sinchan Home Page.png'
 original_image = Image.open(image_path)
 resized_image = original_image.resize((1200, 600), Image.Resampling.LANCZOS)
 im = ImageTk.PhotoImage(resized_image)
