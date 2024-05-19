@@ -167,166 +167,99 @@ def kelas():
             def bisnis():
                 root3.destroy()
                 root4=tk.Toplevel()
-                def satu():
+                def hargaakhir():
                     root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def dua():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tiga():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def empat():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def lima():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def enam():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tujuh():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def delapan():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")    
+                  
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
-                Button(root4, text="Kursi 01", command=satu).grid(row=1, column=0)
-                Button(root4, text="Kursi 02", command=dua).grid(row=2, column=0)
-                Button(root4, text="Kursi 03", command=tiga).grid(row=3, column=0)
-                Button(root4, text="Kursi 04", command=empat).grid(row=4, column=0)
-                Button(root4, text="Kursi 05", command=lima).grid(row=1, column=2)
-                Button(root4, text="Kursi 06", command=enam).grid(row=2, column=2)
-                Button(root4, text="Kursi 07", command=tujuh).grid(row=3, column=2)
-                Button(root4, text="Kursi 08", command=delapan).grid(row=4, column=2)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=1, column=2)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=2, column=2)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=3, column=2)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=4, column=2)
                 b = Button(root4, text="NEXT").grid(row=6, column=1)
                 b.grid(row=3, column=0, columnspan=5)
                 
                 root4.mainloop()
             def eksekutif():
                 root4=tk.Toplevel()
-                def satu():
+                def hargaakhir():
                     root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def dua():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tiga():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def empat():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def lima():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def enam():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tujuh():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def delapan():
-                    root4.destroy()
-                def sembilan():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sepuluh():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sebelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def duabelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def tigabelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def empatbelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def limabelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def enambelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def tujuhbelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def delapanbelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sembilanbelas():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def duapuluh():
-                    root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
+                
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
-                Button(root4, text="Kursi 01", command=satu).grid(row=1, column=0)
-                Button(root4, text="Kursi 02", command=dua).grid(row=2, column=0)
-                Button(root4, text="Kursi 03", command=tiga).grid(row=3, column=0)
-                Button(root4, text="Kursi 04", command=empat).grid(row=4, column=0)
-                Button(root4, text="Kursi 05", command=lima).grid(row=5, column=0)
-                Button(root4, text="Kursi 06", command=enam).grid(row=1, column=1)
-                Button(root4, text="Kursi 07", command=tujuh).grid(row=2, column=1)
-                Button(root4, text="Kursi 08", command=delapan).grid(row=3, column=1)
-                Button(root4, text="Kursi 09", command=sembilan).grid(row=4, column=1)
-                Button(root4, text="Kursi 10", command=sepuluh).grid(row=5, column=1)
-                Button(root4, text="Kursi 11", command=sebelas).grid(row=1, column=3)
-                Button(root4, text="Kursi 12", command=duabelas).grid(row=2, column=3)
-                Button(root4, text="Kursi 13", command=tigabelas).grid(row=3, column=3)
-                Button(root4, text="Kursi 14", command=empatbelas).grid(row=4, column=3)
-                Button(root4, text="Kursi 15", command=limabelas).grid(row=5, column=3)
-                Button(root4, text="Kursi 16", command=enambelas).grid(row=1, column=4)
-                Button(root4, text="Kursi 17", command=tujuhbelas).grid(row=2, column=4)
-                Button(root4, text="Kursi 18", command=delapanbelas).grid(row=3, column=4)
-                Button(root4, text="Kursi 19", command=sembilanbelas).grid(row=4, column=4)
-                Button(root4, text="Kursi 20", command=duapuluh).grid(row=5, column=4)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=1, column=1)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=2, column=1)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=3, column=1)
+                Button(root4, text="Kursi 09", command=hargaakhir).grid(row=4, column=1)
+                Button(root4, text="Kursi 10", command=hargaakhir).grid(row=5, column=1)
+                Button(root4, text="Kursi 11", command=hargaakhir).grid(row=1, column=3)
+                Button(root4, text="Kursi 12", command=hargaakhir).grid(row=2, column=3)
+                Button(root4, text="Kursi 13", command=hargaakhir).grid(row=3, column=3)
+                Button(root4, text="Kursi 14", command=hargaakhir).grid(row=4, column=3)
+                Button(root4, text="Kursi 15", command=hargaakhir).grid(row=5, column=3)
+                Button(root4, text="Kursi 16", command=hargaakhir).grid(row=1, column=4)
+                Button(root4, text="Kursi 17", command=hargaakhir).grid(row=2, column=4)
+                Button(root4, text="Kursi 18", command=hargaakhir).grid(row=3, column=4)
+                Button(root4, text="Kursi 19", command=hargaakhir).grid(row=4, column=4)
+                Button(root4, text="Kursi 20", command=hargaakhir).grid(row=5, column=4)
                 b = Button(root4, text="NEXT").grid(row=6, column=2)
                 b.grid(row=3, column=0, columnspan=5)
                 
                 root4.mainloop()
             def ekonomi():
                 root4=tk.Toplevel()
-                def satu():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
+                def hargaakhir():
+                    root4.destroy()
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+               
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=6, column=0)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=7, column=0)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=8, column=0)
+                Button(root4, text="Kursi 09", command=hargaakhir).grid(row=1, column=1)
+                Button(root4, text="Kursi 10", command=hargaakhir).grid(row=2, column=1)
+                Button(root4, text="Kursi 11", command=hargaakhir).grid(row=3, column=1)
+                Button(root4, text="Kursi 12", command=hargaakhir).grid(row=4, column=1)
+                Button(root4, text="Kursi 13", command=hargaakhir).grid(row=5, column=1)
+                Button(root4, text="Kursi 14", command=hargaakhir).grid(row=6, column=1)
+                Button(root4, text="Kursi 15", command=hargaakhir).grid(row=7, column=1)
+                Button(root4, text="Kursi 16", command=hargaakhir).grid(row=8, column=1)
+                Button(root4, text="Kursi 17", command=hargaakhir).grid(row=1, column=3)
+                Button(root4, text="Kursi 18", command=hargaakhir).grid(row=2, column=3)
+                Button(root4, text="Kursi 19", command=hargaakhir).grid(row=3, column=3)
+                Button(root4, text="Kursi 20", command=hargaakhir).grid(row=4, column=3)
+                Button(root4, text="Kursi 21", command=hargaakhir).grid(row=5, column=3)
+                Button(root4, text="Kursi 22", command=hargaakhir).grid(row=6, column=3)
+                Button(root4, text="Kursi 23", command=hargaakhir).grid(row=7, column=3)
+                Button(root4, text="Kursi 24", command=hargaakhir).grid(row=8, column=3)
+                Button(root4, text="Kursi 25", command=hargaakhir).grid(row=1, column=4)
+                Button(root4, text="Kursi 26", command=hargaakhir).grid(row=2, column=4)
+                Button(root4, text="Kursi 27", command=hargaakhir).grid(row=3, column=4)
+                Button(root4, text="Kursi 28", command=hargaakhir).grid(row=4, column=4)
+                Button(root4, text="Kursi 29", command=hargaakhir).grid(row=5, column=4)
+                Button(root4, text="Kursi 30", command=hargaakhir).grid(row=6, column=4)
+                Button(root4, text="Kursi 31", command=hargaakhir).grid(row=7, column=4)
+                Button(root4, text="Kursi 32", command=hargaakhir).grid(row=8, column=4)
+                b = Button(root4, text="NEXT").grid(row=9, column=2)
+                b.grid(row=3, column=0, columnspan=5)
+                
                 root4.mainloop()
 
             l=Label(root3,text="PILIH KELAS").pack()
@@ -337,111 +270,101 @@ def kelas():
         def siang():
             root3=tk.Toplevel()
             def bisnis():
+                root3.destroy()
                 root4=tk.Toplevel()
-                def satu():
+                def hargaakhir():
+                    root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
+                  
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=1, column=2)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=2, column=2)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=3, column=2)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=4, column=2)
+                b = Button(root4, text="NEXT").grid(row=6, column=1)
+                b.grid(row=3, column=0, columnspan=5)
+                
                 root4.mainloop()
             def eksekutif():
                 root4=tk.Toplevel()
-                def satu():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
+                def hargaakhir():
+                    root4.destroy()
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=1, column=1)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=2, column=1)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=3, column=1)
+                Button(root4, text="Kursi 09", command=hargaakhir).grid(row=4, column=1)
+                Button(root4, text="Kursi 10", command=hargaakhir).grid(row=5, column=1)
+                Button(root4, text="Kursi 11", command=hargaakhir).grid(row=1, column=3)
+                Button(root4, text="Kursi 12", command=hargaakhir).grid(row=2, column=3)
+                Button(root4, text="Kursi 13", command=hargaakhir).grid(row=3, column=3)
+                Button(root4, text="Kursi 14", command=hargaakhir).grid(row=4, column=3)
+                Button(root4, text="Kursi 15", command=hargaakhir).grid(row=5, column=3)
+                Button(root4, text="Kursi 16", command=hargaakhir).grid(row=1, column=4)
+                Button(root4, text="Kursi 17", command=hargaakhir).grid(row=2, column=4)
+                Button(root4, text="Kursi 18", command=hargaakhir).grid(row=3, column=4)
+                Button(root4, text="Kursi 19", command=hargaakhir).grid(row=4, column=4)
+                Button(root4, text="Kursi 20", command=hargaakhir).grid(row=5, column=4)
+                b = Button(root4, text="NEXT").grid(row=6, column=2)
+                b.grid(row=3, column=0, columnspan=5)
+                
                 root4.mainloop()
             def ekonomi():
                 root4=tk.Toplevel()
-                def satu():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
+                def hargaakhir():
+                    root4.destroy()
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+               
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=6, column=0)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=7, column=0)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=8, column=0)
+                Button(root4, text="Kursi 09", command=hargaakhir).grid(row=1, column=1)
+                Button(root4, text="Kursi 10", command=hargaakhir).grid(row=2, column=1)
+                Button(root4, text="Kursi 11", command=hargaakhir).grid(row=3, column=1)
+                Button(root4, text="Kursi 12", command=hargaakhir).grid(row=4, column=1)
+                Button(root4, text="Kursi 13", command=hargaakhir).grid(row=5, column=1)
+                Button(root4, text="Kursi 14", command=hargaakhir).grid(row=6, column=1)
+                Button(root4, text="Kursi 15", command=hargaakhir).grid(row=7, column=1)
+                Button(root4, text="Kursi 16", command=hargaakhir).grid(row=8, column=1)
+                Button(root4, text="Kursi 17", command=hargaakhir).grid(row=1, column=3)
+                Button(root4, text="Kursi 18", command=hargaakhir).grid(row=2, column=3)
+                Button(root4, text="Kursi 19", command=hargaakhir).grid(row=3, column=3)
+                Button(root4, text="Kursi 20", command=hargaakhir).grid(row=4, column=3)
+                Button(root4, text="Kursi 21", command=hargaakhir).grid(row=5, column=3)
+                Button(root4, text="Kursi 22", command=hargaakhir).grid(row=6, column=3)
+                Button(root4, text="Kursi 23", command=hargaakhir).grid(row=7, column=3)
+                Button(root4, text="Kursi 24", command=hargaakhir).grid(row=8, column=3)
+                Button(root4, text="Kursi 25", command=hargaakhir).grid(row=1, column=4)
+                Button(root4, text="Kursi 26", command=hargaakhir).grid(row=2, column=4)
+                Button(root4, text="Kursi 27", command=hargaakhir).grid(row=3, column=4)
+                Button(root4, text="Kursi 28", command=hargaakhir).grid(row=4, column=4)
+                Button(root4, text="Kursi 29", command=hargaakhir).grid(row=5, column=4)
+                Button(root4, text="Kursi 30", command=hargaakhir).grid(row=6, column=4)
+                Button(root4, text="Kursi 31", command=hargaakhir).grid(row=7, column=4)
+                Button(root4, text="Kursi 32", command=hargaakhir).grid(row=8, column=4)
+                b = Button(root4, text="NEXT").grid(row=9, column=2)
+                b.grid(row=3, column=0, columnspan=5)
+                
                 root4.mainloop()
 
             l=Label(root3,text="PILIH KELAS").pack()
@@ -452,111 +375,101 @@ def kelas():
         def sore():
             root3=tk.Toplevel()
             def bisnis():
+                root3.destroy()
                 root4=tk.Toplevel()
-                def satu():
+                def hargaakhir():
+                    root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
+                  
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=1, column=2)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=2, column=2)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=3, column=2)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=4, column=2)
+                b = Button(root4, text="NEXT").grid(row=6, column=1)
+                b.grid(row=3, column=0, columnspan=5)
+                
+                root4.mainloop()
             def eksekutif():
                 root4=tk.Toplevel()
-                def satu():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
-
+                def hargaakhir():
+                    root4.destroy()
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=1, column=1)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=2, column=1)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=3, column=1)
+                Button(root4, text="Kursi 09", command=hargaakhir).grid(row=4, column=1)
+                Button(root4, text="Kursi 10", command=hargaakhir).grid(row=5, column=1)
+                Button(root4, text="Kursi 11", command=hargaakhir).grid(row=1, column=3)
+                Button(root4, text="Kursi 12", command=hargaakhir).grid(row=2, column=3)
+                Button(root4, text="Kursi 13", command=hargaakhir).grid(row=3, column=3)
+                Button(root4, text="Kursi 14", command=hargaakhir).grid(row=4, column=3)
+                Button(root4, text="Kursi 15", command=hargaakhir).grid(row=5, column=3)
+                Button(root4, text="Kursi 16", command=hargaakhir).grid(row=1, column=4)
+                Button(root4, text="Kursi 17", command=hargaakhir).grid(row=2, column=4)
+                Button(root4, text="Kursi 18", command=hargaakhir).grid(row=3, column=4)
+                Button(root4, text="Kursi 19", command=hargaakhir).grid(row=4, column=4)
+                Button(root4, text="Kursi 20", command=hargaakhir).grid(row=5, column=4)
+                b = Button(root4, text="NEXT").grid(row=6, column=2)
+                b.grid(row=3, column=0, columnspan=5)
+                
+                root4.mainloop()
             def ekonomi():
                 root4=tk.Toplevel()
-                def satu():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-
-
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
+                def hargaakhir():
+                    root4.destroy()
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+               
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=6, column=0)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=7, column=0)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=8, column=0)
+                Button(root4, text="Kursi 09", command=hargaakhir).grid(row=1, column=1)
+                Button(root4, text="Kursi 10", command=hargaakhir).grid(row=2, column=1)
+                Button(root4, text="Kursi 11", command=hargaakhir).grid(row=3, column=1)
+                Button(root4, text="Kursi 12", command=hargaakhir).grid(row=4, column=1)
+                Button(root4, text="Kursi 13", command=hargaakhir).grid(row=5, column=1)
+                Button(root4, text="Kursi 14", command=hargaakhir).grid(row=6, column=1)
+                Button(root4, text="Kursi 15", command=hargaakhir).grid(row=7, column=1)
+                Button(root4, text="Kursi 16", command=hargaakhir).grid(row=8, column=1)
+                Button(root4, text="Kursi 17", command=hargaakhir).grid(row=1, column=3)
+                Button(root4, text="Kursi 18", command=hargaakhir).grid(row=2, column=3)
+                Button(root4, text="Kursi 19", command=hargaakhir).grid(row=3, column=3)
+                Button(root4, text="Kursi 20", command=hargaakhir).grid(row=4, column=3)
+                Button(root4, text="Kursi 21", command=hargaakhir).grid(row=5, column=3)
+                Button(root4, text="Kursi 22", command=hargaakhir).grid(row=6, column=3)
+                Button(root4, text="Kursi 23", command=hargaakhir).grid(row=7, column=3)
+                Button(root4, text="Kursi 24", command=hargaakhir).grid(row=8, column=3)
+                Button(root4, text="Kursi 25", command=hargaakhir).grid(row=1, column=4)
+                Button(root4, text="Kursi 26", command=hargaakhir).grid(row=2, column=4)
+                Button(root4, text="Kursi 27", command=hargaakhir).grid(row=3, column=4)
+                Button(root4, text="Kursi 28", command=hargaakhir).grid(row=4, column=4)
+                Button(root4, text="Kursi 29", command=hargaakhir).grid(row=5, column=4)
+                Button(root4, text="Kursi 30", command=hargaakhir).grid(row=6, column=4)
+                Button(root4, text="Kursi 31", command=hargaakhir).grid(row=7, column=4)
+                Button(root4, text="Kursi 32", command=hargaakhir).grid(row=8, column=4)
+                b = Button(root4, text="NEXT").grid(row=9, column=2)
+                b.grid(row=3, column=0, columnspan=5)
+                
                 root4.mainloop()
             l=Label(root3,text="PILIH KELAS").pack()
             c1=tk.Checkbutton(root3,text="Bisnis(+Rp. 15.000)",command=bisnis).pack()
@@ -566,112 +479,101 @@ def kelas():
         def malam():
             root3=tk.Toplevel()
             def bisnis():
+                root3.destroy()
                 root4=tk.Toplevel()
-                def satu():
+                def hargaakhir():
+                    root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
-
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
+                  
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=1, column=2)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=2, column=2)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=3, column=2)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=4, column=2)
+                b = Button(root4, text="NEXT").grid(row=6, column=1)
+                b.grid(row=3, column=0, columnspan=5)
+                
+                root4.mainloop()
             def eksekutif():
                 root4=tk.Toplevel()
-                def satu():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
-
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
+                def hargaakhir():
+                    root4.destroy()
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=1, column=1)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=2, column=1)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=3, column=1)
+                Button(root4, text="Kursi 09", command=hargaakhir).grid(row=4, column=1)
+                Button(root4, text="Kursi 10", command=hargaakhir).grid(row=5, column=1)
+                Button(root4, text="Kursi 11", command=hargaakhir).grid(row=1, column=3)
+                Button(root4, text="Kursi 12", command=hargaakhir).grid(row=2, column=3)
+                Button(root4, text="Kursi 13", command=hargaakhir).grid(row=3, column=3)
+                Button(root4, text="Kursi 14", command=hargaakhir).grid(row=4, column=3)
+                Button(root4, text="Kursi 15", command=hargaakhir).grid(row=5, column=3)
+                Button(root4, text="Kursi 16", command=hargaakhir).grid(row=1, column=4)
+                Button(root4, text="Kursi 17", command=hargaakhir).grid(row=2, column=4)
+                Button(root4, text="Kursi 18", command=hargaakhir).grid(row=3, column=4)
+                Button(root4, text="Kursi 19", command=hargaakhir).grid(row=4, column=4)
+                Button(root4, text="Kursi 20", command=hargaakhir).grid(row=5, column=4)
+                b = Button(root4, text="NEXT").grid(row=6, column=2)
+                b.grid(row=3, column=0, columnspan=5)
+                
                 root4.mainloop()
             def ekonomi():
                 root4=tk.Toplevel()
-                def satu():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def dua():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def tiga():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def empat():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def lima():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def enam():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def tujuh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def delapan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def sembilan():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-                def sepuluh():
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
-
-                l=Label(root4,text="PILIH KURSI ANDA").pack()
-                c1=tk.Checkbutton(root4,text="Kursi 01",command=satu).pack()
-                c2=tk.Checkbutton(root4,text="Kursi 02",command=dua).pack()
-                c3=tk.Checkbutton(root4,text="Kursi 03",command=tiga).pack()
-                c4=tk.Checkbutton(root4,text="Kursi 04",command=empat).pack()
-                c5=tk.Checkbutton(root4,text="Kursi 05",command=lima).pack()
-                c6=tk.Checkbutton(root4,text="Kursi 06",command=enam).pack()
-                c7=tk.Checkbutton(root4,text="Kursi 07",command=tujuh).pack()
-                c8=tk.Checkbutton(root4,text="Kursi 08",command=delapan).pack()
-                c9=tk.Checkbutton(root4,text="kursi 09",command=sembilan).pack()
-                c10=tk.Checkbutton(root4,text="Kursi 10",command=sepuluh).pack()
-                b=Button(root4,text="NEXT",command=next).pack()
-                root4.mainloop()
+                def hargaakhir():
+                    root4.destroy()
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+               
+                l = Label(root4, text="PILIH KURSI ANDA")
+                l.grid(row=0, column=0, columnspan=5)
+                Button(root4, text="Kursi 01", command=hargaakhir).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=hargaakhir).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=hargaakhir).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=hargaakhir).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=hargaakhir).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=hargaakhir).grid(row=6, column=0)
+                Button(root4, text="Kursi 07", command=hargaakhir).grid(row=7, column=0)
+                Button(root4, text="Kursi 08", command=hargaakhir).grid(row=8, column=0)
+                Button(root4, text="Kursi 09", command=hargaakhir).grid(row=1, column=1)
+                Button(root4, text="Kursi 10", command=hargaakhir).grid(row=2, column=1)
+                Button(root4, text="Kursi 11", command=hargaakhir).grid(row=3, column=1)
+                Button(root4, text="Kursi 12", command=hargaakhir).grid(row=4, column=1)
+                Button(root4, text="Kursi 13", command=hargaakhir).grid(row=5, column=1)
+                Button(root4, text="Kursi 14", command=hargaakhir).grid(row=6, column=1)
+                Button(root4, text="Kursi 15", command=hargaakhir).grid(row=7, column=1)
+                Button(root4, text="Kursi 16", command=hargaakhir).grid(row=8, column=1)
+                Button(root4, text="Kursi 17", command=hargaakhir).grid(row=1, column=3)
+                Button(root4, text="Kursi 18", command=hargaakhir).grid(row=2, column=3)
+                Button(root4, text="Kursi 19", command=hargaakhir).grid(row=3, column=3)
+                Button(root4, text="Kursi 20", command=hargaakhir).grid(row=4, column=3)
+                Button(root4, text="Kursi 21", command=hargaakhir).grid(row=5, column=3)
+                Button(root4, text="Kursi 22", command=hargaakhir).grid(row=6, column=3)
+                Button(root4, text="Kursi 23", command=hargaakhir).grid(row=7, column=3)
+                Button(root4, text="Kursi 24", command=hargaakhir).grid(row=8, column=3)
+                Button(root4, text="Kursi 25", command=hargaakhir).grid(row=1, column=4)
+                Button(root4, text="Kursi 26", command=hargaakhir).grid(row=2, column=4)
+                Button(root4, text="Kursi 27", command=hargaakhir).grid(row=3, column=4)
+                Button(root4, text="Kursi 28", command=hargaakhir).grid(row=4, column=4)
+                Button(root4, text="Kursi 29", command=hargaakhir).grid(row=5, column=4)
+                Button(root4, text="Kursi 30", command=hargaakhir).grid(row=6, column=4)
+                Button(root4, text="Kursi 31", command=hargaakhir).grid(row=7, column=4)
+                Button(root4, text="Kursi 32", command=hargaakhir).grid(row=8, column=4)
+                b = Button(root4, text="NEXT").grid(row=9, column=2)
+                b.grid(row=3, column=0, columnspan=5)
+                
             l=Label(root3,text="PILIH KELAS").pack()
             c1=tk.Checkbutton(root3,text="Bisnis(+Rp. 15.000)",command=bisnis).pack()
             c2=tk.Checkbutton(root3,text="Eksekutif(+Rp. 10.000)",command=eksekutif).pack()
@@ -699,7 +601,7 @@ def kelas():
 def pembayaran():
     print("Pembayaran")
 
-image_path = r'Kereta Sinchan Home Page.png'
+image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
 original_image = Image.open(image_path)
 resized_image = original_image.resize((1200, 650), Image.Resampling.LANCZOS)
 im = ImageTk.PhotoImage(resized_image)
