@@ -1,9 +1,10 @@
 
 import tkinter as tk
 from tkinter import Label, Button, messagebox
-from tkinter import ttk  # Import ttk for the Combobox
+from tkinter import ttk 
 from tkcalendar import DateEntry  
 from PIL import Image, ImageTk
+import subprocess
 
 root = tk.Tk()
 root.title("PEMESANAN TIKET KERETA SINCHAN")
@@ -599,7 +600,8 @@ def kelas():
     b7.pack()
 
 def pembayaran():
-    print("Pembayaran")
+    subprocess.Popen(["python", "Project-17-Kereta-Sinchan-Solo-Raya\\Progress\\pembayaran.py"])
+
 
 image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
 original_image = Image.open(image_path)

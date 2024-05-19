@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-from PIL import Image, ImageTk
+from PIL import Image, ImageTk, ImageDraw, ImageFont
 import csv
 
 def submit_form():
@@ -18,7 +18,7 @@ def submit_form():
         messagebox.showerror("Error", "Harap isi semua kolom yang diperlukan!")
         return
 
-    with open(r'Progress\payment_data.csv', mode='w', newline='') as file:
+    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\payment_data.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Nama", "Jenis Kelamin", "Umur", "Email", "Tipe Kartu", "Nomor Kartu", "Nomor HP", "Jumlah Pembayaran"])
         writer.writerow([nama, gender, umur, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran])
@@ -37,31 +37,33 @@ def submit_form():
     card_type_combobox.set("Pilih Tipe Kartu")
 
 def show_ticket(nama, gender, umur, email, nomor_hp, jumlah_pembayaran):
+    e_ticket= r'Project-17-Kereta-Sinchan-Solo-Raya\1.jpg'
+    original_image = Image.open(e_ticket)
+    resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
+    
+    draw = ImageDraw.Draw(resized_image)
+    font = ImageFont.truetype("arial.ttf", 20)
+    text_color = (0, 0, 0)
+
+    draw.text((70, 100), f"Nama: {nama}", font=font, fill=text_color)
+    draw.text((70, 130), f"Jenis Kelamin: {gender}", font=font, fill=text_color)
+    draw.text((70, 160), f"Umur: {umur}", font=font, fill=text_color)
+    draw.text((70, 190), f"Email: {email}", font=font, fill=text_color)
+    draw.text((70, 220), f"Nomor HP: {nomor_hp}", font=font, fill=text_color)
+    draw.text((70, 250), f"Jumlah Pembayaran: {jumlah_pembayaran}", font=font, fill=text_color)
+
+    ticket_image = ImageTk.PhotoImage(resized_image)
+    
     ticket_window = tk.Toplevel(root)
     ticket_window.title("E-Ticket")
     ticket_frame = ttk.Frame(ticket_window, padding="20")
     ticket_frame.grid(row=0, column=0)
-    
-    ttk.Label(ticket_frame, text="E-Ticket", font=("Helvetica", 16)).grid(row=0, column=0, columnspan=2, pady=(0, 10))
-    ttk.Label(ticket_frame, text="Nama:").grid(row=1, column=0, sticky="e")
-    ttk.Label(ticket_frame, text=nama).grid(row=1, column=1, sticky="w")
-    
-    ttk.Label(ticket_frame, text="Jenis Kelamin:").grid(row=2, column=0, sticky="e")
-    ttk.Label(ticket_frame, text=gender).grid(row=2, column=1, sticky="w")
-    
-    ttk.Label(ticket_frame, text="Umur:").grid(row=3, column=0, sticky="e")
-    ttk.Label(ticket_frame, text=umur).grid(row=3, column=1, sticky="w")
-    
-    ttk.Label(ticket_frame, text="Email:").grid(row=4, column=0, sticky="e")
-    ttk.Label(ticket_frame, text=email).grid(row=4, column=1, sticky="w")
-    
-    ttk.Label(ticket_frame, text="Nomor HP:").grid(row=5, column=0, sticky="e")
-    ttk.Label(ticket_frame, text=nomor_hp).grid(row=5, column=1, sticky="w")
-    
-    ttk.Label(ticket_frame, text="Jumlah Pembayaran:").grid(row=6, column=0, sticky="e")
-    ttk.Label(ticket_frame, text=jumlah_pembayaran).grid(row=6, column=1, sticky="w")
-    
-    ttk.Button(ticket_frame, text="Tutup", command=ticket_window.destroy).grid(row=7, column=0, columnspan=2, pady=(10, 0))
+
+    image_label = ttk.Label(ticket_frame, image=ticket_image)
+    image_label.image = ticket_image
+    image_label.grid(row=0, column=0, columnspan=2, pady=(0, 10))
+
+    ttk.Button(ticket_frame, text="Tutup", command=ticket_window.destroy).grid(row=1, column=0, columnspan=2, pady=(10, 0))
 
 root = tk.Tk()
 root.title("Formulir Pembayaran")
@@ -71,7 +73,7 @@ main_frame.grid(row=0, column=0)
 
 ttk.Label(main_frame, text="Formulir Pembayaran", font=("Helvetica", 16)).grid(row=0, column=0, columnspan=2, pady=(0, 10))
 
-image_path = r'kereta sinchan.png'
+image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Pembayaran.png'
 try:
     original_image = Image.open(image_path)
     resized_image = original_image.resize((597, 350), Image.Resampling.LANCZOS)
