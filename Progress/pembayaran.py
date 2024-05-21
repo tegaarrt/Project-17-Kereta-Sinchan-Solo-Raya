@@ -18,7 +18,7 @@ def submit_form():
         messagebox.showerror("Error", "Harap isi semua kolom yang diperlukan!")
         return
 
-    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\payment_data.csv', mode='w', newline='') as file:
+    with open(r'Progress\\payment_data.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Nama", "Jenis Kelamin", "Umur", "Email", "Tipe Kartu", "Nomor Kartu", "Nomor HP", "Jumlah Pembayaran"])
         writer.writerow([nama, gender, umur, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran])
@@ -37,20 +37,20 @@ def submit_form():
     card_type_combobox.set("Pilih Tipe Kartu")
 
 def show_ticket(nama, gender, umur, email, nomor_hp, jumlah_pembayaran):
-    e_ticket= r'Project-17-Kereta-Sinchan-Solo-Raya\1.jpg'
+    e_ticket= r'Tiket Kereta.png'
     original_image = Image.open(e_ticket)
     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
     
     draw = ImageDraw.Draw(resized_image)
-    font = ImageFont.truetype("arial.ttf", 20)
+    font = ImageFont.truetype("arial.ttf", 19)
     text_color = (0, 0, 0)
 
-    draw.text((70, 100), f"Nama: {nama}", font=font, fill=text_color)
-    draw.text((70, 130), f"Jenis Kelamin: {gender}", font=font, fill=text_color)
-    draw.text((70, 160), f"Umur: {umur}", font=font, fill=text_color)
-    draw.text((70, 190), f"Email: {email}", font=font, fill=text_color)
-    draw.text((70, 220), f"Nomor HP: {nomor_hp}", font=font, fill=text_color)
-    draw.text((70, 250), f"Jumlah Pembayaran: {jumlah_pembayaran}", font=font, fill=text_color)
+    draw.text((70, 130), f"Nama : {nama}", font=font, fill=text_color)
+    draw.text((70, 160), f"Jenis Kelamin : {gender}", font=font, fill=text_color)
+    draw.text((70, 190), f"Umur : {umur}", font=font, fill=text_color)
+    draw.text((70, 220), f"Email : {email}", font=font, fill=text_color)
+    draw.text((70, 250), f"Nomor HP : {nomor_hp}", font=font, fill=text_color)
+    draw.text((70, 280), f"Jumlah Pembayaran : {jumlah_pembayaran}", font=font, fill=text_color)
 
     ticket_image = ImageTk.PhotoImage(resized_image)
     
@@ -73,7 +73,7 @@ main_frame.grid(row=0, column=0)
 
 ttk.Label(main_frame, text="Formulir Pembayaran", font=("Helvetica", 16)).grid(row=0, column=0, columnspan=2, pady=(0, 10))
 
-image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Pembayaran.png'
+image_path = r'Kereta Sinchan Pembayaran.png'
 try:
     original_image = Image.open(image_path)
     resized_image = original_image.resize((597, 350), Image.Resampling.LANCZOS)
