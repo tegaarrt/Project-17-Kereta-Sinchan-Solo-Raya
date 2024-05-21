@@ -18,7 +18,7 @@ def submit_form():
         messagebox.showerror("Error", "Harap isi semua kolom yang diperlukan!")
         return
 
-    with open(r'Progress\\payment_data.csv', mode='w', newline='') as file:
+    with open(r'Project-17-Kereta-Sinchan-Solo-Raya/Progress/payment_data.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Nama", "Jenis Kelamin", "Umur", "Email", "Tipe Kartu", "Nomor Kartu", "Nomor HP", "Jumlah Pembayaran"])
         writer.writerow([nama, gender, umur, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran])
@@ -37,7 +37,7 @@ def submit_form():
     card_type_combobox.set("Pilih Tipe Kartu")
 
 def show_ticket(nama, gender, umur, email, nomor_hp, jumlah_pembayaran):
-    e_ticket= r'Tiket Kereta.png'
+    e_ticket= r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta.png'
     original_image = Image.open(e_ticket)
     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
     
@@ -128,3 +128,5 @@ submit_button = ttk.Button(main_frame, text="Bayar sekarang", command=submit_for
 submit_button.grid(row=12, column=0, columnspan=2, pady=(20, 0))
 
 root.mainloop()
+
+print("error")
