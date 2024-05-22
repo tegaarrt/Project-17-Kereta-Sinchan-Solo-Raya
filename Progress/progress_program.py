@@ -230,7 +230,6 @@ def kelas():
                 Button(root4, text="Kursi 20", command=hargaakhir).grid(row=5, column=4)
                 b = Button(root4, text="NEXT").grid(row=6, column=2)
                 b.grid(row=3, column=0, columnspan=5)
-                
                 root4.mainloop()
             def ekonomi():
                 root4=tk.Toplevel()
@@ -684,9 +683,11 @@ original_image = Image.open(image_path)
 resized_image = original_image.resize((1200, 650), Image.Resampling.LANCZOS)
 im = ImageTk.PhotoImage(resized_image)
 
-i = Label(root, image=im)
+
+i = Label(root, image=im)  
 i.image = im  
 i.place(x=0, y=50) 
+
 
 # Modify the buttons to include an icon image
 button_continue = Button(root, text="Booking Tiket", bg='orange', font=("Arial", 12), compound="left", command=starter)
