@@ -5,6 +5,8 @@ from tkinter import ttk
 from tkcalendar import DateEntry  
 from PIL import Image, ImageTk
 import subprocess
+import csv
+
 
 root = tk.Tk()
 root.title("PEMESANAN TIKET KERETA SINCHAN")
@@ -145,7 +147,7 @@ def starter():
     l2 = Label(root1, text="PILIH RUTE")
     l2.pack()
 
-    # Combobox for route selection
+    
     routes = ["SOLO - WONOGIRI", "SOLO - SRAGEN", "SOLO - KARANGANYAR", "SOLO - BOYOLALI", "SOLO - KLATEN", "WONOGIRI - KARANGANYAR", "WONOGIRI - SRAGEN",
               "WONOGIRI - BOYOLALI","KARANGANYAR - SRAGEN", "KARANGANYER - BOYOLALI", "KARANGANYAR - KLATEN "]
     route_combobox = ttk.Combobox(root1, values=routes)
@@ -169,8 +171,14 @@ def kelas():
                 root3.destroy()
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 25.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                   
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -189,8 +197,14 @@ def kelas():
             def eksekutif():
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 20.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                 
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -221,8 +235,14 @@ def kelas():
             def ekonomi():
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 15.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -274,8 +294,14 @@ def kelas():
                 root3.destroy()
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 25.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                   
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -289,13 +315,19 @@ def kelas():
                 Button(root4, text="Kursi 08", command=hargaakhir).grid(row=4, column=2)
                 b = Button(root4, text="NEXT").grid(row=6, column=1)
                 b.grid(row=3, column=0, columnspan=5)
-                
+                  
                 root4.mainloop()
             def eksekutif():
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 20.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                 
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -326,8 +358,14 @@ def kelas():
             def ekonomi():
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 15.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -379,8 +417,14 @@ def kelas():
                 root3.destroy()
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 25.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                   
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -399,8 +443,14 @@ def kelas():
             def eksekutif():
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 20.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                 
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -431,8 +481,14 @@ def kelas():
             def ekonomi():
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 15.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -483,8 +539,14 @@ def kelas():
                 root3.destroy()
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 25.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
                     messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                   
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -503,8 +565,14 @@ def kelas():
             def eksekutif():
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 20.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 20.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                 
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -535,8 +603,14 @@ def kelas():
             def ekonomi():
                 root4=tk.Toplevel()
                 def hargaakhir():
+                    harga="Rp 15.000"
+                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["harga ticket"])
+                         writer.writerow([harga])
                     root4.destroy()
-                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 25.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Harga Tiket Total Anda adalah Rp. 15.000")
+                    messagebox.showinfo("PEMBERITAHUAN", "Silahkan lanjut ke menu pembayaran")
                
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
@@ -598,6 +672,8 @@ def kelas():
     b6.pack()
     b7 = Button(root1, text='EXIT', bg='red', command=root1.destroy)
     b7.pack()
+
+
 
 def pembayaran():
     subprocess.Popen(["python", "Project-17-Kereta-Sinchan-Solo-Raya\\Progress\\pembayaran.py"])
