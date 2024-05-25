@@ -40,7 +40,7 @@ def starter():
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
                 root4.resizable(False, False)
-                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv', mode='w', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(["Kereta"])
                     writer.writerow([train_name])
@@ -78,7 +78,7 @@ def starter():
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
-                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["Kereta"])
                          writer.writerow([train_name])
@@ -114,7 +114,7 @@ def starter():
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
-                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv', mode='w', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(["Kereta"])
                     writer.writerow([train_name])
@@ -148,7 +148,7 @@ def starter():
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
-                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv', mode='w', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(["Kereta"])
                     writer.writerow([train_name])
