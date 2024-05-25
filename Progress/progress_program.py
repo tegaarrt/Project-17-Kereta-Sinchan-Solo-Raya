@@ -11,6 +11,7 @@ import csv
 root = tk.Tk()
 root.title("PEMESANAN TIKET KERETA SINCHAN")
 root.geometry("1200x700")  
+root.resizable(False, False)
 
 
 l1 = Label(root, text="WELCOME TO PEMESANAN TIKET KERETA SINCHAN", font=("Helvetica", 16, "bold"), bg='lightblue')
@@ -18,22 +19,32 @@ l1.pack(pady=10)
 
 def starter():
     root1 = tk.Toplevel(root)
+    b.config(state=tk.NORMAL)
     root1.title("Pilih Tanggal dan Rute")
+    root1.resizable(False, False)
     
     def show():
         root1.destroy()
         root2 = tk.Toplevel(root)
         root2.title("Pilih Waktu Keberangkatan")
+        root2.resizable(False, False)
         
         def pagi():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Pagi")
+            root3.resizable(False, False)
             
-            def harga():
+            def harga(train_name):
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
+                root4.resizable(False, False)
+                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow(["Kereta"])
+                    writer.writerow([train_name])
+                
                 
                 def konfirmasi():
                     while True:
@@ -41,8 +52,9 @@ def starter():
                             messagebox.showinfo("Lanjut", "Silahkan Pilih ke menu Pemilihan Kelas")
                             break
                         else:
+                            root4.destroy()
                             return starter()
-                    messagebox.showinfo("SELAMAT", "TIKET ANDA TELAH DIPESAN")
+                    root4.destroy()
                 
                 l = Label(root4, text="Harga Tiket Anda adalah : Rp. 10.000")
                 l.pack()
@@ -51,9 +63,10 @@ def starter():
             
             l = Label(root3, text="KERETA YANG TERSEDIA :")
             l.pack()
-            c = tk.Checkbutton(root3, text="PRABRORO CHAMP (7:05 a.m.)", command=harga)
+            c = tk.Checkbutton(root3, text="PRABRORO CHAMP (7:05 a.m.)", command=lambda:harga("PRABRORO CHAMP (7:05 a.m)"))
             c.pack()
-            c1 = tk.Checkbutton(root3, text="MUST A NICE EXPRESS (9:20 a.m.)", command=harga)
+            c1 = tk.Checkbutton(root3, text="MUST A NICE EXPRESS (9:20 a.m.)", command=lambda:harga("MUST A NICE EXPRESS (9.20 a.m)")
+            )
             c1.pack()
         
         def siang():
@@ -61,13 +74,24 @@ def starter():
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Siang")
             
-            def harga():
+            def harga(train_name):
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
+                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                         writer = csv.writer(file)
+                         writer.writerow(["Kereta"])
+                         writer.writerow([train_name])
                 
                 def konfirmasi():
-                    messagebox.showinfo("SELAMAT", "TIKET ANDA TELAH DIPESAN")
+                    while True:
+                        if messagebox.askyesno("Konfirmasi", "Pilih Kelas yang anda inginkan?"):
+                            messagebox.showinfo("Lanjut", "Silahkan Pilih ke menu Pemilihan Kelas")
+                            break
+                        else:
+                            root4.destroy()
+                            return starter()
+                    root4.destroy()
                 
                 l = Label(root4, text="Harga Tiket Anda : Rp.10.000")
                 l.pack()
@@ -76,9 +100,9 @@ def starter():
             
             l = Label(root3, text="KERETA YANG TERSEDIA:")
             l.pack()
-            c = tk.Checkbutton(root3, text="JANGGAR TRAIN (12:20 p.m.)", command=harga)
+            c = tk.Checkbutton(root3, text="JANGGAR TRAIN (12:20 p.m.)", command=lambda: harga("JANGGAR TRAIN (12:20 p.m.)"))
             c.pack()
-            c1 = tk.Checkbutton(root3, text="PRABRORO CHAMP (13:30 p.m.)", command=harga)
+            c1 = tk.Checkbutton(root3, text="PRABRORO CHAMP (13:30 p.m.)", command=lambda: harga("PRABRORO CHAMP (13:30 p.m.)"))
             c1.pack()
         
         def sore():
@@ -86,13 +110,24 @@ def starter():
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Sore")
             
-            def harga():
+            def harga(train_name):
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
+                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow(["Kereta"])
+                    writer.writerow([train_name])
                 
                 def konfirmasi():
-                    messagebox.showinfo("SELAMAT", "TIKET ANDA TELAH DIPESAN")
+                    while True:
+                        if messagebox.askyesno("Konfirmasi", "Pilih Kelas yang anda inginkan?"):
+                            messagebox.showinfo("Lanjut", "Silahkan Pilih ke menu Pemilihan Kelas")
+                            break
+                        else:
+                            root4.destroy()
+                            return starter()
+                    root4.destroy()
                 
                 l = Label(root4, text="Harga Tiket Anda : Rp.10.000")
                 l.pack()
@@ -101,7 +136,7 @@ def starter():
             
             l = Label(root3, text="KERETA YANG TERSEDIA:")
             l.pack()
-            c = tk.Checkbutton(root3, text="MUST A NICE EXPRESS (16:15 p.m.)", command=harga)
+            c = tk.Checkbutton(root3, text="MUST A NICE EXPRESS (16:15 p.m.)", command=lambda:harga("MUST A NICE EXPRESS(16:15 p.m.)"))
             c.pack()
         
         def malam():
@@ -109,13 +144,25 @@ def starter():
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Malam")
             
-            def harga():
+            def harga(train_name):
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
+                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow(["Kereta"])
+                    writer.writerow([train_name])
+                
                 
                 def konfirmasi():
-                    messagebox.showinfo("SELAMAT", "TIKET ANDA TELAH DIPESAN")
+                    while True:
+                        if messagebox.askyesno("Konfirmasi", "Pilih Kelas yang anda inginkan?"):
+                            messagebox.showinfo("Lanjut", "Silahkan Pilih ke menu Pemilihan Kelas")
+                            break
+                        else:
+                            root4.destroy()
+                            return starter()
+                    root4.destroy()
                 
                 l = Label(root4, text="Harga Tiket Anda : Rp.10.000")
                 l.pack()
@@ -124,7 +171,7 @@ def starter():
             
             l = Label(root3, text="KERETA YANG TERSEDIA:")
             l.pack()
-            c = tk.Checkbutton(root3, text="JANGGAR TRAIN (20:00 P.M.)", command=harga)
+            c = tk.Checkbutton(root3, text="JANGGAR TRAIN (20:00 P.M.)", command=lambda:harga("JANGGAR TRAIN (20:00 P.M.)"))
             c.pack()
         
         l3 = Label(root2, text="PILIH WAKTU KEBERANGKATAN:")
@@ -161,6 +208,7 @@ def starter():
 
 def kelas():
     root1=tk.Toplevel()
+    b.config(state=tk.NORMAL)
     def show():
         root1.destroy()
         root2=tk.Toplevel()
@@ -172,7 +220,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 25.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -198,7 +246,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 20.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -235,7 +283,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 15.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -294,7 +342,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 25.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -320,7 +368,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 20.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -358,7 +406,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 15.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -417,7 +465,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 25.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -443,7 +491,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 20.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -481,7 +529,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 15.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -539,7 +587,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 25.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -565,7 +613,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 20.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -603,7 +651,7 @@ def kelas():
                 root4=tk.Toplevel()
                 def hargaakhir():
                     harga="Rp 15.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
@@ -675,7 +723,7 @@ def kelas():
 
 
 def pembayaran():
-    subprocess.Popen(["python", "Project-17-Kereta-Sinchan-Solo-Raya\\Progress\\pembayaran.py"])
+    subprocess.Popen(["python", "Project-17-Kereta-Sinchan-Solo-Raya\Progress\pembayaran.py"])
 
 
 image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
@@ -693,10 +741,10 @@ i.place(x=0, y=50)
 button_continue = Button(root, text="Booking Tiket", bg='orange', font=("Arial", 12), compound="left", command=starter)
 button_continue.place(x=220, y=290, width=150, height=50) 
 
-b = Button(root, text="Pilih Kelas", bg='light green', font=("Arial", 12), compound="left", command=kelas)
+b = Button(root, text="Pilih Kelas", bg='light green', font=("Arial", 12), compound="left", state=tk.DISABLED, command=kelas)
 b.place(x=420, y=290, width=150, height=50)  
 
-b1 = Button(root, text="Pembayaran", bg='light blue', font=("Arial", 12), compound="left", command=pembayaran)
+b1 = Button(root, text="Pembayaran", bg='light blue', font=("Arial", 12), compound="left",  command=pembayaran)
 b1.place(x=620, y=290, width=150, height=50)  
 
 button_quit = Button(root, text='EXIT', bg='red', font=("Arial", 12), compound="left", command=root.quit)

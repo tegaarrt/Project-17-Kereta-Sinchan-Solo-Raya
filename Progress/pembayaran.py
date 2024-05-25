@@ -10,6 +10,12 @@ def load_data():
         next(reader)  
         for row in reader:
             return row[0]
+def load_kereta():
+    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv') as file:
+        reader = csv.reader(file)
+        next(reader)  
+        for row in reader:
+            return row[0]
 
 def fill_payment_amount():
     jumlah_pembayaran = load_data()
@@ -19,12 +25,15 @@ def fill_payment_amount():
     else:
         messagebox.showerror("Error", "Tidak bisa memuat jumlah pembayaran!")
 
+def kereta_berangkat():
+    kereta = load_kereta()
+    if kereta:
+        kereta_entry.delete(0, tk.END)
+        kereta_entry.insert(0, kereta)
+    else:
+        messagebox.showerror("Error", "Tidak bisa memuat jumlah pembayaran!")
+
 def validate_input():
-    nama = name_entry.get()
-    if not nama.isalpha():
-        messagebox.showerror("Error", "Nama harus berupa huruf!")
-        messagebox.showerror("Error", "Pembayaran Error lengkapi dengan benar")
-        return False
 
 
     umur = age_entry.get()
@@ -66,19 +75,20 @@ def submit_form():
     tipe_kartu = card_type_combobox.get()
     nomor_kartu = card_no_entry.get()
     nomor_hp = phone_no_entry.get()
-    jumlah_pembayaran = jml_pembayaran_entry.get()  
+    jumlah_pembayaran = jml_pembayaran_entry.get() 
+    kereta = kereta_entry.get() 
 
-    if not (nama and umur and email and tipe_kartu and nomor_kartu and nomor_hp and jumlah_pembayaran):
+    if not (nama and umur and email and tipe_kartu and nomor_kartu and nomor_hp and jumlah_pembayaran and kereta):
         messagebox.showerror("Error", "Harap isi semua kolom yang diperlukan!")
         return
 
-    with open(r'C:\Users\asus\Documents\TUBES\PROGRESS TUBES\Project-17-Kereta-Sinchan-Solo-Raya\Progress\payment_data.csv', mode='w', newline='') as file:
+    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\payment_data.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Nama", "Jenis Kelamin", "Umur", "Email", "Tipe Kartu", "Nomor Kartu", "Nomor HP", "Jumlah Pembayaran"])
-        writer.writerow([nama, gender, umur, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran])
+        writer.writerow([nama, gender, umur, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran, kereta])
     
     messagebox.showinfo("Sukses", "Pembayaran sudah berhasil dan telah disimpan!")
-    show_ticket(nama, gender, umur, email, nomor_hp, jumlah_pembayaran)
+    show_ticket(nama, umur, email, nomor_hp, jumlah_pembayaran, kereta)
 
     name_entry.delete(0, tk.END)
     age_entry.delete(0, tk.END)
@@ -89,22 +99,23 @@ def submit_form():
     gender_var.set("Laki-Laki")
     card_type_combobox.set("Pilih Tipe Kartu")
 
-def show_ticket(nama, gender, umur, email, nomor_hp, jumlah_pembayaran):
-    e_ticket = r'C:\Users\asus\Documents\TUBES\PROGRESS TUBES\Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta.png'
-    original_image = Image.open(e_ticket)
+def show_ticket(nama, umur, email, nomor_hp, jumlah_pembayaran, kereta):
+    e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta.png'
+    original_image = Image.open(e_ticket_path)
     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
     
     draw = ImageDraw.Draw(resized_image)
     font = ImageFont.truetype("arial.ttf", 19)
     text_color = (0, 0, 0)
 
-    draw.text((70, 130), f"Nama : {nama}", font=font, fill=text_color)
-    draw.text((70, 160), f"Jenis Kelamin : {gender}", font=font, fill=text_color)
-    draw.text((70, 190), f"Umur : {umur}", font=font, fill=text_color)
-    draw.text((70, 220), f"Email : {email}", font=font, fill=text_color)
-    draw.text((70, 250), f"Nomor HP : {nomor_hp}", font=font, fill=text_color)
-    draw.text((70, 280), f"Jumlah Pembayaran : {jumlah_pembayaran}", font=font, fill=text_color)
+    draw.text((50, 130), f"Nama : {nama}", font=font, fill=text_color)
+    draw.text((50, 160), f"Umur : {umur}", font=font, fill=text_color)
+    draw.text((50, 190), f"Email : {email}", font=font, fill=text_color)
+    draw.text((50, 220), f"Nomor HP : {nomor_hp}", font=font, fill=text_color)
+    draw.text((50, 250), f"Jumlah Pembayaran : {jumlah_pembayaran}", font=font, fill=text_color)
+    draw.text((50, 280), f"Kereta : {kereta}", font=font, fill=text_color)
 
+    # Ubah dari ImageTk.PhotoImage menjadi PhotoImage
     ticket_image = ImageTk.PhotoImage(resized_image)
     
     ticket_window = tk.Toplevel(root)
@@ -118,6 +129,8 @@ def show_ticket(nama, gender, umur, email, nomor_hp, jumlah_pembayaran):
 
     ttk.Button(ticket_frame, text="Tutup", command=ticket_window.destroy).grid(row=1, column=0, columnspan=2, pady=(10, 0))
 
+
+
 root = tk.Tk()
 root.title("Formulir Pembayaran")
 
@@ -126,7 +139,7 @@ main_frame.grid(row=0, column=0)
 
 ttk.Label(main_frame, text="Formulir Pembayaran", font=("Helvetica", 16)).grid(row=0, column=0, columnspan=2, pady=(0, 10))
 
-image_path = r'C:\Users\asus\Documents\TUBES\PROGRESS TUBES\Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Pembayaran.png'
+image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Pembayaran.png'
 try:
     original_image = Image.open(image_path)
     resized_image = original_image.resize((597, 350), Image.Resampling.LANCZOS)
@@ -177,9 +190,14 @@ ttk.Label(main_frame, text="Jumlah Pembayaran").grid(row=11, column=0, sticky="e
 jml_pembayaran_entry = ttk.Entry(main_frame)
 jml_pembayaran_entry.grid(row=11, column=1, sticky="w")
 
+ttk.Label(main_frame, text="Kereta").grid(row=12, column=0, sticky="e")
+kereta_entry = ttk.Entry(main_frame)
+kereta_entry.grid(row=12, column=1, sticky="w")
+
 submit_button = ttk.Button(main_frame, text="Bayar sekarang", command=submit_form)
-submit_button.grid(row=12, column=0, columnspan=2, pady=(20, 0))
+submit_button.grid(row=13, column=0, columnspan=2, pady=(20, 0))
 
 fill_payment_amount()
+kereta_berangkat()
 
 root.mainloop()
