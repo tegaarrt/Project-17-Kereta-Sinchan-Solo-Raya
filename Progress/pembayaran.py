@@ -82,12 +82,6 @@ def print_eticket(image_path):
 
 
 def validate_input():
-    umur = age_entry.get()
-    if not umur.isdigit() or int(umur) < 17:
-        messagebox.showerror("Error", "Umur minimal anda adalah 17 tahun untuk pembayaran")
-        messagebox.showerror("Error", "Pembayaran Error lengkapi dengan benar")
-        return False
-    
 
     email = email_entry.get()
     if not isinstance(email, str) or "@" not in email :
@@ -116,30 +110,30 @@ def submit_form():
 
     nama = name_entry.get()
     gender = gender_var.get()
-    umur = age_entry.get()
+    
     email = email_entry.get()
     tipe_kartu = card_type_combobox.get()
     nomor_kartu = card_no_entry.get()
     nomor_hp = phone_no_entry.get()
     jumlah_pembayaran = jml_pembayaran_entry.get() 
+    kursi = kursi_entry.get()
     kereta = kereta_entry.get() 
     tanggal_dan_rute = tanggal_rute_entry.get()
 
-    if not (nama and umur and email and tipe_kartu and nomor_kartu and nomor_hp and jumlah_pembayaran and kereta and tanggal_dan_rute):
+    if not (nama and email and tipe_kartu and nomor_kartu and nomor_hp and kursi and jumlah_pembayaran and kereta and tanggal_dan_rute):
         messagebox.showerror("Error", "Harap isi semua kolom yang diperlukan!")
         return
 
     with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\payment_data.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Nama", "Jenis Kelamin", "Umur", "Email", "Tipe Kartu", "Nomor Kartu", "Nomor HP", "Jumlah Pembayaran","Tanggal dan Rute"])
-        writer.writerow([nama, gender, umur, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran, kereta, tanggal_dan_rute])
+        writer.writerow([nama, gender, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran, kereta, tanggal_dan_rute])
     
     messagebox.showinfo("Sukses", "Pembayaran sudah berhasil dan telah disimpan!")
-    show_ticket(nama, jumlah_pembayaran, kereta, tanggal_dan_rute)
+    show_ticket(nama, jumlah_pembayaran, kereta,kursi, tanggal_dan_rute)
 
 
     name_entry.delete(0, tk.END)
-    age_entry.delete(0, tk.END)
     email_entry.delete(0, tk.END)
     card_no_entry.delete(0, tk.END)
     phone_no_entry.delete(0, tk.END)
@@ -149,8 +143,8 @@ def submit_form():
     gender_var.set("Laki-Laki")
     card_type_combobox.set("Pilih Tipe Kartu")
 
-def show_ticket(nama, jumlah_pembayaran, kereta, tanggal_dan_rute):
-    e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta.png'
+def show_ticket(nama, jumlah_pembayaran, kereta, tanggal_dan_rute, kursi):
+    e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta fix.png'
     original_image = Image.open(e_ticket_path)
     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
     
@@ -158,10 +152,11 @@ def show_ticket(nama, jumlah_pembayaran, kereta, tanggal_dan_rute):
     font = ImageFont.truetype("arial.ttf", 19)
     text_color = (0, 0, 0)
 
-    draw.text((30, 130), f"Nama Penumpang    : {nama}", font=font, fill=text_color)
-    draw.text((30, 160), f"Jumlah Pembayaran : {jumlah_pembayaran}", font=font, fill=text_color)
-    draw.text((30, 190), f"Keberangkatan     : {kereta}", font=font, fill=text_color)
-    draw.text((30, 220), f"Tanggal dan Rute  : {tanggal_dan_rute}", font=font, fill=text_color)
+    draw.text((30, 130), f"Nama Penumpang     : {nama}", font=font, fill=text_color)
+    draw.text((30, 160), f"Jumlah Pembayaran  : {jumlah_pembayaran}", font=font, fill=text_color)
+    draw.text((30, 190), f"Keberangkatan      : {kereta}", font=font, fill=text_color)
+    draw.text((30, 220), f"Kursi dan Kelas    : {kursi}", font=font, fill=text_color)
+    draw.text((30, 250), f"Tanggal dan Rute   : {tanggal_dan_rute}", font=font, fill=text_color)
 
 
    
