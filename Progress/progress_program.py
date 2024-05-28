@@ -58,7 +58,15 @@ def starter():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Pagi")
+            root3.geometry("600x400")
             root3.resizable(False, False)
+            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
+            trainName_image_path = Image.open(trainName_image_path)
+            trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
+            trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
+            trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
+            trainName_bg_label.image = trainName_bg_photo  
+            trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
             
             def harga(train_name):
                 root3.destroy()
@@ -98,6 +106,15 @@ def starter():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Siang")
+            root3.geometry("600x400")
+            root3.resizable(False, False)
+            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
+            trainName_image_path = Image.open(trainName_image_path)
+            trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
+            trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
+            trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
+            trainName_bg_label.image = trainName_bg_photo  
+            trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
             
             def harga(train_name):
                 root3.destroy()
@@ -134,6 +151,15 @@ def starter():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Sore")
+            root3.geometry("600x400")
+            root3.resizable(False, False)
+            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
+            trainName_image_path = Image.open(trainName_image_path)
+            trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
+            trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
+            trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
+            trainName_bg_label.image = trainName_bg_photo  
+            trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
             
             def harga(train_name):
                 root3.destroy()
@@ -168,6 +194,15 @@ def starter():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Malam")
+            root3.geometry("600x400")
+            root3.resizable(False, False)
+            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
+            trainName_image_path = Image.open(trainName_image_path)
+            trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
+            trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
+            trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
+            trainName_bg_label.image = trainName_bg_photo  
+            trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
             
             def harga(train_name):
                 root3.destroy()
@@ -242,7 +277,8 @@ def kelas():
                 root3.destroy()
                 root4=tk.Toplevel()
                 root4.geometry("600x400")
-                eko_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
+                root4.resizable(False, False)
+                eko_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background.png'
                 eko_bg_image = Image.open(eko_bg_image_path)
                 eko_resized_image = eko_bg_image.resize((600, 400), Image.Resampling.LANCZOS)
                 eko_bg_photo = ImageTk.PhotoImage(eko_resized_image)
@@ -282,7 +318,8 @@ def kelas():
                 root3.destroy()
                 root4=tk.Toplevel()
                 root4.geometry("600x400")
-                eko_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
+                root4.resizable(False, False)
+                eko_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background.png'
                 eko_bg_image = Image.open(eko_bg_image_path)
                 eko_resized_image = eko_bg_image.resize((600, 400), Image.Resampling.LANCZOS)
                 eko_bg_photo = ImageTk.PhotoImage(eko_resized_image)
@@ -329,7 +366,8 @@ def kelas():
                 root3.destroy()
                 root4=tk.Toplevel()
                 root4.geometry("600x400")
-                eko_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
+                root4.resizable(False, False)
+                eko_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background.png'
                 eko_bg_image = Image.open(eko_bg_image_path)
                 eko_resized_image = eko_bg_image.resize((600, 400), Image.Resampling.LANCZOS)
                 eko_bg_photo = ImageTk.PhotoImage(eko_resized_image)
