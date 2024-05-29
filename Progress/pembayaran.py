@@ -143,7 +143,7 @@ def submit_form():
     gender_var.set("Laki-Laki")
     card_type_combobox.set("Pilih Tipe Kartu")
 
-def show_ticket(nama, jumlah_pembayaran, kereta, tanggal_dan_rute, kursi):
+def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
     e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta fix.png'
     original_image = Image.open(e_ticket_path)
     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)

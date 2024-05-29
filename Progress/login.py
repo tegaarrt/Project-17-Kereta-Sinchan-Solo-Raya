@@ -49,15 +49,15 @@ def show_register_window():
     reg_bg_label.image = reg_bg_photo  # Keep a reference
     reg_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
     
-    tk.Label(register_window, text="Username:", font=("Arial", 12)).pack(pady=10)
+    tk.Label(register_window, text="Username:", bg='light blue', font=("Arial", 12)).place(x=160, y=80)
     username_entry = tk.Entry(register_window, font=("Arial", 12))
-    username_entry.pack(pady=5)
+    username_entry.place(x= 110, y=120)
 
-    tk.Label(register_window, text="Password:", font=("Arial", 12)).pack(pady=10)
+    tk.Label(register_window, text="Password:", bg='light blue',font=("Arial", 12)).place(x=160, y=150)
     password_entry = tk.Entry(register_window, font=("Arial", 12))
-    password_entry.pack(pady=5)
+    password_entry.place(x=110 , y=180)
 
-    tk.Button(register_window, text="Register", font=("Arial", 12), command=lambda: register(username_entry.get(), password_entry.get())).pack(pady=20)
+    tk.Button(register_window, text="Register", bg='light blue', font=("Arial", 12), command=lambda: register(username_entry.get(), password_entry.get())).place(x= 160, y= 220)
 
 def show_login_window():
     global login_window
@@ -74,15 +74,15 @@ def show_login_window():
     login_bg_label.image = login_bg_photo  
     login_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
     
-    tk.Label(login_window, text="Username:", font=("Arial", 12)).pack(pady=10)
+    tk.Label(login_window, text="Username:", font=("Arial", 12)).place(x=160, y=80)
     username_entry = tk.Entry(login_window, font=("Arial", 12))
-    username_entry.pack(pady=5)
+    username_entry.place(x= 110, y=120)
 
-    tk.Label(login_window, text="Password:", font=("Arial", 12)).pack(pady=10)
+    tk.Label(login_window, text="Password:", font=("Arial", 12)).place(x=160, y=150)
     password_entry = tk.Entry(login_window, font=("Arial", 12), show="*")
-    password_entry.pack(pady=5)
+    password_entry.place(x=110 , y=180)
 
-    tk.Button(login_window, text="Login", font=("Arial", 12), command=lambda: login(username_entry.get(), password_entry.get())).pack(pady=20)
+    tk.Button(login_window, text="Login", font=("Arial", 12), command=lambda: login(username_entry.get(), password_entry.get())).place(x= 160, y= 220)
 
 # Main window
 root = tk.Tk()
