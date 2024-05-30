@@ -8,13 +8,13 @@ import os
 
 
 def load_data():
-    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv') as file:
+    with open(r'Progress\database_pembayaran.csv') as file:
         reader = csv.reader(file)
         next(reader)  
         for row in reader:
             return row[0]
 def load_kereta():
-    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv') as file:
+    with open(r'Progress\kereta dan waktu.csv') as file:
         reader = csv.reader(file)
         next(reader)  
         for row in reader:
@@ -23,7 +23,7 @@ def load_kereta():
 def load_tanggal():
     tanggal_rute = [] 
     try:
-        with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\tanggal dan rute.csv') as file:
+        with open(r'Progress\tanggal dan rute.csv') as file:
             reader = csv.reader(file)
             next(reader) 
             for row in reader:
@@ -36,7 +36,7 @@ def load_tanggal():
 
             
 def load_kursi():
-    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_kursi.csv') as file:
+    with open(r'Progress\database_kursi.csv') as file:
         reader = csv.reader(file)
         next(reader)  
         for row in reader:
@@ -124,7 +124,7 @@ def submit_form():
         messagebox.showerror("Error", "Harap isi semua kolom yang diperlukan!")
         return
 
-    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\payment_data.csv', mode='w', newline='') as file:
+    with open(r'Progress\payment_data.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["Nama", "Jenis Kelamin", "Umur", "Email", "Tipe Kartu", "Nomor Kartu", "Nomor HP", "Jumlah Pembayaran","Tanggal dan Rute"])
         writer.writerow([nama, gender, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran, kereta, tanggal_dan_rute])
@@ -143,8 +143,8 @@ def submit_form():
     gender_var.set("Laki-Laki")
     card_type_combobox.set("Pilih Tipe Kartu")
 
-def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
-    e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta fix.png'
+def show_ticket(nama, jumlah_pembayaran, kereta, tanggal_dan_rute, kursi):
+    e_ticket_path = r'Tiket Kereta fix.png'
     original_image = Image.open(e_ticket_path)
     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
     
@@ -183,7 +183,7 @@ main_frame.grid(row=0, column=0)
 
 ttk.Label(main_frame, text="Formulir Pembayaran", font=("Helvetica", 16)).grid(row=0, column=0, columnspan=2, pady=(0, 10))
 
-image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Pembayaran.png'
+image_path = r'Kereta Sinchan Pembayaran.png'
 try:
     original_image = Image.open(image_path)
     resized_image = original_image.resize((597, 350), Image.Resampling.LANCZOS)

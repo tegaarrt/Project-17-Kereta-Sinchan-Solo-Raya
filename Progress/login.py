@@ -132,7 +132,7 @@ def register(username, password):
         messagebox.showerror("Error", "Username dan password tidak boleh kosong!")
     else:
         user_data[username] = password
-        with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\user_data.csv', mode="w", newline="") as file:
+        with open(r'Progress\user_data.csv', mode="w", newline="") as file:
             writer = csv.writer(file)
             writer.writerow([username, password])
         messagebox.showinfo("Sukses", "Registrasi berhasil!")
@@ -153,7 +153,11 @@ def show_register_window():
     register_window.geometry("600x360")
     
     # Load background image
+<<<<<<< HEAD
     reg_bg_image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Background 2.png'
+=======
+    reg_bg_image_path = r'Background.png'
+>>>>>>> ca9f328ea7d9e798abd1efd3dfe174a58c9d3fd9
     reg_bg_image = Image.open(reg_bg_image_path)
     reg_resized_image = reg_bg_image.resize((600, 360), Image.Resampling.LANCZOS)
     reg_bg_photo = ImageTk.PhotoImage(reg_resized_image)
@@ -178,7 +182,11 @@ def show_login_window():
     login_window.geometry("600x360")
     
     # Load background image
+<<<<<<< HEAD
     login_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background 2.png'
+=======
+    login_bg_image_path =r'Background.png'
+>>>>>>> ca9f328ea7d9e798abd1efd3dfe174a58c9d3fd9
     login_bg_image = Image.open(login_bg_image_path)
     login_resized_image = login_bg_image.resize((600, 360), Image.Resampling.LANCZOS)
     login_bg_photo = ImageTk.PhotoImage(login_resized_image)
@@ -202,7 +210,7 @@ root.title("Program Pemesanan Tiket Sinchan")
 root.geometry("900x540")
 
 # Load background image
-image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
+image_path = r'Kereta Sinchan Home Page.png'
 original_image = Image.open(image_path)
 resized_image = original_image.resize((900, 540), Image.Resampling.LANCZOS)
 bg_photo = ImageTk.PhotoImage(resized_image)

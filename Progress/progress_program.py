@@ -26,11 +26,11 @@ def starter():
     root1 = tk.Toplevel(root)
     b.config(state=tk.NORMAL)
     root1.title("Pilih Tanggal dan Rute")
-    root1.geometry("600x400")
+    root1.geometry("600x360")
     root1.resizable(False, False)
-    kelas_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background.png'
+    kelas_bg_image_path =r'Background.png'
     kelas_bg_image = Image.open(kelas_bg_image_path)
-    kelas_resized_image = kelas_bg_image.resize((600, 400), Image.Resampling.LANCZOS)
+    kelas_resized_image = kelas_bg_image.resize((600, 360), Image.Resampling.LANCZOS)
     kelas_bg_photo = ImageTk.PhotoImage(kelas_resized_image)
     kelas_bg_label = tk.Label(root1, image=kelas_bg_photo)
     kelas_bg_label.image = kelas_bg_photo  
@@ -39,16 +39,16 @@ def starter():
     def show():
         selected_date = cal.get()
         selected_route = route_combobox.get()
-        with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\tanggal dan rute.csv', mode='w', newline='') as file:
+        with open(r'Progress\tanggal dan rute.csv', mode='w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(["Tanggal", "Rute"])
             writer.writerow([selected_date, selected_route])
         root1.destroy()
         root2 = tk.Toplevel(root)
-        root2.geometry("600x400")
-        kelas_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background.png'
+        root2.geometry("600x360")
+        kelas_bg_image_path =r'Background.png'
         kelas_bg_image = Image.open(kelas_bg_image_path)
-        kelas_resized_image = kelas_bg_image.resize((600, 400), Image.Resampling.LANCZOS)
+        kelas_resized_image = kelas_bg_image.resize((600, 360), Image.Resampling.LANCZOS)
         kelas_bg_photo = ImageTk.PhotoImage(kelas_resized_image)
         kelas_bg_label = tk.Label(root2, image=kelas_bg_photo)
         kelas_bg_label.image = kelas_bg_photo  
@@ -60,8 +60,9 @@ def starter():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Pagi")
-            root3.geometry("600x400")
+            root3.geometry("600x360")
             root3.resizable(False, False)
+<<<<<<< HEAD
             # trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background 2.png'
             # trainName_image_path = Image.open(trainName_image_path)
             # trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
@@ -69,13 +70,22 @@ def starter():
             # trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
             # trainName_bg_label.image = trainName_bg_photo  
             # trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+=======
+            trainName_image_path =r'Kumpulan Logo.png'
+            trainName_image_path = Image.open(trainName_image_path)
+            trainName_image_path_resized_image = trainName_image_path.resize((600, 360), Image.Resampling.LANCZOS)
+            trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
+            trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
+            trainName_bg_label.image = trainName_bg_photo  
+            trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+>>>>>>> ca9f328ea7d9e798abd1efd3dfe174a58c9d3fd9
             
             def harga(train_name):
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
                 root4.resizable(False, False)
-                with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(["Kereta"])
                     writer.writerow([train_name])
@@ -126,11 +136,15 @@ def starter():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Siang")
-            root3.geometry("600x400")
+            root3.geometry("600x360")
             root3.resizable(False, False)
+<<<<<<< HEAD
             trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background 2.png'
+=======
+            trainName_image_path =r'Kumpulan Logo.png'
+>>>>>>> ca9f328ea7d9e798abd1efd3dfe174a58c9d3fd9
             trainName_image_path = Image.open(trainName_image_path)
-            trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
+            trainName_image_path_resized_image = trainName_image_path.resize((600, 360), Image.Resampling.LANCZOS)
             trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
             trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
             trainName_bg_label.image = trainName_bg_photo  
@@ -140,7 +154,7 @@ def starter():
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
-                with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["Kereta"])
                          writer.writerow([train_name])
@@ -171,11 +185,11 @@ def starter():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Sore")
-            root3.geometry("600x400")
+            root3.geometry("600x360")
             root3.resizable(False, False)
-            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
+            trainName_image_path =r'Kumpulan Logo.png'
             trainName_image_path = Image.open(trainName_image_path)
-            trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
+            trainName_image_path_resized_image = trainName_image_path.resize((600, 360), Image.Resampling.LANCZOS)
             trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
             trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
             trainName_bg_label.image = trainName_bg_photo  
@@ -185,7 +199,7 @@ def starter():
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
-                with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(["Kereta"])
                     writer.writerow([train_name])
@@ -215,6 +229,7 @@ def starter():
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Malam")
             root3.resizable(False, False)
+<<<<<<< HEAD
             # trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
             # trainName_image_path = Image.open(trainName_image_path)
             # trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
@@ -222,12 +237,21 @@ def starter():
             # trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
             # trainName_bg_label.image = trainName_bg_photo  
             # trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+=======
+            trainName_image_path =r'Kumpulan Logo.png'
+            trainName_image_path = Image.open(trainName_image_path)
+            trainName_image_path_resized_image = trainName_image_path.resize((600, 360), Image.Resampling.LANCZOS)
+            trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
+            trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
+            trainName_bg_label.image = trainName_bg_photo  
+            trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+>>>>>>> ca9f328ea7d9e798abd1efd3dfe174a58c9d3fd9
             
             def harga(train_name):
                 root3.destroy()
                 root4 = tk.Toplevel(root)
                 root4.title("Harga Tiket")
-                with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\kereta dan waktu.csv', mode='w', newline='') as file:
+                with open(r'Progress\kereta dan waktu.csv', mode='w', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(["Kereta"])
                     writer.writerow([train_name])
@@ -297,7 +321,7 @@ def starter():
 
 def kelas():
             root3=tk.Toplevel()
-            root3.geometry("600x400")
+            root3.geometry("600x360")
             def bisnis():
                 root3.destroy()
                 root4=tk.Toplevel()
@@ -305,11 +329,11 @@ def kelas():
                 
                 def hargaakhir(kursi):
                     harga="Rp 25.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
-                    with open (r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_kursi.csv',mode='w', newline='') as file:
+                    with open (r'Progress\database_kursi.csv',mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["Kursi"])
                          writer.writerow([kursi])
@@ -338,11 +362,11 @@ def kelas():
                 root4.resizable(False, False)
                 def hargaakhir(kursi):
                     harga="Rp 20.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
-                    with open (r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_kursi.csv',mode='w', newline='') as file:
+                    with open (r'Progress\database_kursi.csv',mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["Kursi"])
                          writer.writerow([kursi])
@@ -383,11 +407,11 @@ def kelas():
                 root4.resizable(False, False)
                 def hargaakhir(kursi):
                     harga="Rp 15.000"
-                    with open(r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_pembayaran.csv', mode='w', newline='') as file:
+                    with open(r'Progress\database_pembayaran.csv', mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["harga ticket"])
                          writer.writerow([harga])
-                    with open (r'Project-17-Kereta-Sinchan-Solo-Raya\Progress\database_kursi.csv',mode='w', newline='') as file:
+                    with open (r'Progress\database_kursi.csv',mode='w', newline='') as file:
                          writer = csv.writer(file)
                          writer.writerow(["Kursi"])
                          writer.writerow([kursi])
@@ -440,9 +464,9 @@ def kelas():
 
             l = tk.Label(root3, text="PILIH KELAS")
             l.grid(row=1, column=0, columnspan=2, padx=10, pady=10)
-            kelas_bg_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
+            kelas_bg_image_path =r'Kereta Sinchan Home Page.png'
             kelas_bg_image = Image.open(kelas_bg_image_path)
-            kelas_resized_image = kelas_bg_image.resize((600, 400), Image.Resampling.LANCZOS)
+            kelas_resized_image = kelas_bg_image.resize((600, 360), Image.Resampling.LANCZOS)
             kelas_bg_photo = ImageTk.PhotoImage(kelas_resized_image)
             kelas_bg_label = tk.Label(root3, image=kelas_bg_photo)
             kelas_bg_label.image = kelas_bg_photo  
@@ -461,10 +485,10 @@ def kelas():
         
 
 def pembayaran():
-    subprocess.Popen(["python", "Project-17-Kereta-Sinchan-Solo-Raya\Progress\pembayaran.py"])
+    subprocess.Popen(["python", "Progress\pembayaran.py"])
 
 
-image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Kereta Sinchan Home Page.png'
+image_path = r'Kereta Sinchan Home Page.png'
 original_image = Image.open(image_path)
 resized_image = original_image.resize((1200, 650), Image.Resampling.LANCZOS)
 im = ImageTk.PhotoImage(resized_image)
