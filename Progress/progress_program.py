@@ -9,15 +9,17 @@ import csv
 import login
 
 
+#Halaman login
 login
 
+#Main Window
 root = tk.Tk()
 root.title("PEMESANAN TIKET KERETA SINCHAN")
 root.geometry("1200x700")  
 root.resizable(False, False)
 
 
-l1 = Label(root, text="WELCOME TO PEMESANAN TIKET KERETA SINCHAN", font=("Helvetica", 16, "bold"), bg='lightblue')
+l1 = Label(root, text="WELCOME TO PEMESANAN TIKET KERETA SINCHAN", font=("Perpetua", 16, "bold"), bg='lightblue')
 l1.pack(pady=10)
 
 def starter():
@@ -60,13 +62,13 @@ def starter():
             root3.title("Pilih Kereta Pagi")
             root3.geometry("600x400")
             root3.resizable(False, False)
-            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
-            trainName_image_path = Image.open(trainName_image_path)
-            trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
-            trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
-            trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
-            trainName_bg_label.image = trainName_bg_photo  
-            trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+            # trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background 2.png'
+            # trainName_image_path = Image.open(trainName_image_path)
+            # trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
+            # trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
+            # trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
+            # trainName_bg_label.image = trainName_bg_photo  
+            # trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
             
             def harga(train_name):
                 root3.destroy()
@@ -77,7 +79,7 @@ def starter():
                     writer = csv.writer(file)
                     writer.writerow(["Kereta"])
                     writer.writerow([train_name])
-                
+
                 
                 def konfirmasi():
                     while True:
@@ -96,11 +98,29 @@ def starter():
             
             l = Label(root3, text="KERETA YANG TERSEDIA :")
             l.pack()
-            c = tk.Checkbutton(root3, text="PRABRORO CHAMP (07:05 Pagi)", command=lambda:harga("PRABRORO CHAMP (07:05)"))
-            c.pack()
-            c1 = tk.Checkbutton(root3, text="MUST A NICE EXPRESS (09:20 Pagi)", command=lambda:harga("MUST A NICE EXPRESS (09.20)")
-            )
-            c1.pack()
+            # c = tk.Checkbutton(root3, text="PRABRORO CHAMP (07:05 Pagi)", command=lambda:harga("PRABRORO CHAMP (07:05)"))
+            # c.pack()
+            # c1 = tk.Checkbutton(root3, text="MUST A NICE EXPRESS (09:20 Pagi)", command=lambda:harga("MUST A NICE EXPRESS (09.20)")
+            # )
+            # c1.pack()
+            prabro_image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\PRABORO.jpg'
+            prabro_image = Image.open(prabro_image_path)
+            prabro_resized_image = prabro_image.resize((200, 160), Image.Resampling.LANCZOS)
+            prabro_photo = ImageTk.PhotoImage(prabro_resized_image)
+            
+            musta_image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Must A Nice Express Logo.png'
+            musta_image = Image.open(musta_image_path)
+            musta_resized_image = musta_image.resize((200, 160), Image.Resampling.LANCZOS)
+            musta_photo = ImageTk.PhotoImage(musta_resized_image)
+            
+            # Transparent buttons with images
+            prabro_button = tk.Button(root3, image=prabro_photo,bg='white', command=lambda: harga("PRABRORO CHAMP (07:05)"))
+            prabro_button.image = prabro_photo
+            prabro_button.place(x=60, y=90, height=130, width=130)
+            
+            musta_button = tk.Button(root3, image=musta_photo, command=lambda: harga("MUST A NICE EXPRESS (09:20)"))
+            musta_button.image = musta_photo
+            musta_button.place(x=240, y=90, height=130, width=130)
         
         def siang():
             root2.destroy()
@@ -108,7 +128,7 @@ def starter():
             root3.title("Pilih Kereta Siang")
             root3.geometry("600x400")
             root3.resizable(False, False)
-            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
+            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Background 2.png'
             trainName_image_path = Image.open(trainName_image_path)
             trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
             trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
@@ -187,21 +207,21 @@ def starter():
             
             l = Label(root3, text="KERETA YANG TERSEDIA:")
             l.pack()
-            c = tk.Checkbutton(root3, text="MUST A NICE EXPRESS (16:15 Sore)", command=lambda:harga("MUST A NICE EXPRESS(16:15)"))
-            c.pack()
+            c =tk.Button(root3, text="MUST A NICE EXPRESS (16:15 Sore)",bg='white', command=lambda:harga("MUST A NICE EXPRESS(16:15)"))
+            c.place(x=200,y=200, height= 10, width=20)
         
         def malam():
             root2.destroy()
             root3 = tk.Toplevel(root)
             root3.title("Pilih Kereta Malam")
             root3.resizable(False, False)
-            trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
-            trainName_image_path = Image.open(trainName_image_path)
-            trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
-            trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
-            trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
-            trainName_bg_label.image = trainName_bg_photo  
-            trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+            # trainName_image_path =r'Project-17-Kereta-Sinchan-Solo-Raya\Kumpulan Logo.png'
+            # trainName_image_path = Image.open(trainName_image_path)
+            # trainName_image_path_resized_image = trainName_image_path.resize((600, 400), Image.Resampling.LANCZOS)
+            # trainName_bg_photo = ImageTk.PhotoImage(trainName_image_path_resized_image)
+            # trainName_bg_label = tk.Label(root3, image=trainName_bg_photo)
+            # trainName_bg_label.image = trainName_bg_photo  
+            # trainName_bg_label.place(x=0, y=0, relwidth=1, relheight=1)
             
             def harga(train_name):
                 root3.destroy()
@@ -230,8 +250,15 @@ def starter():
             
             l = Label(root3, text="KERETA YANG TERSEDIA:")
             l.pack()
-            c = tk.Checkbutton(root3, text="JANGGAR TRAIN (19:00 Malam)", command=lambda:harga("JANGGAR TRAIN (19:00)"))
-            c.pack()
+            # c = tk.Checkbutton(root3, text="JANGGAR TRAIN (19:00 Malam)", command=lambda:harga("JANGGAR TRAIN (19:00)"))
+            # c.pack()
+            prabro_image_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Janggar Train Logo.png'
+            prabro_image = Image.open(prabro_image_path)
+            prabro_resized_image = prabro_image.resize((200, 160), Image.Resampling.LANCZOS)
+            prabro_photo = ImageTk.PhotoImage(prabro_resized_image)
+            prabro_button = tk.Button(root3, image=prabro_photo,bg='brown', command=lambda: harga("JANGGAR TRAIN (19:00)"))
+            prabro_button.image = prabro_photo
+            prabro_button.place(x=60, y=90, height=130, width=130)
         
         l3 = Label(root2, text="PILIH WAKTU KEBERANGKATAN", bg='light blue')
         l3.place(x = 195, y = 40)
@@ -370,38 +397,38 @@ def kelas():
                
                 l = Label(root4, text="PILIH KURSI ANDA")
                 l.grid(row=0, column=0, columnspan=5)
-                Button(root4, text="Kursi 01", command=lambda:hargaakhir("01 Ekonomi")).grid(row=1, column=0)
-                Button(root4, text="Kursi 02", command=lambda:hargaakhir("02 Ekonomi")).grid(row=2, column=0)
-                Button(root4, text="Kursi 03", command=lambda:hargaakhir("03 Ekonomi")).grid(row=3, column=0)
-                Button(root4, text="Kursi 04", command=lambda:hargaakhir("04 Ekonomi")).grid(row=4, column=0)
-                Button(root4, text="Kursi 05", command=lambda:hargaakhir("05 Ekonomi")).grid(row=5, column=0)
-                Button(root4, text="Kursi 06", command=lambda:hargaakhir("06 Ekonomi")).grid(row=6, column=0)
-                Button(root4, text="Kursi 07", command=lambda:hargaakhir("07 Ekonomi")).grid(row=7, column=0)
-                Button(root4, text="Kursi 08", command=lambda:hargaakhir("08 Ekonomi")).grid(row=8, column=0)
-                Button(root4, text="Kursi 09", command=lambda:hargaakhir("09 Ekonomi")).grid(row=1, column=1)
-                Button(root4, text="Kursi 10", command=lambda:hargaakhir("10 Ekonomi")).grid(row=2, column=1)
-                Button(root4, text="Kursi 11", command=lambda:hargaakhir("11 Ekonomi")).grid(row=3, column=1)
-                Button(root4, text="Kursi 12", command=lambda:hargaakhir("12 Ekonomi")).grid(row=4, column=1)
-                Button(root4, text="Kursi 13", command=lambda:hargaakhir("13 Ekonomi")).grid(row=5, column=1)
-                Button(root4, text="Kursi 14", command=lambda:hargaakhir("14 Ekonomi")).grid(row=6, column=1)
-                Button(root4, text="Kursi 15", command=lambda:hargaakhir("15 Ekonomi")).grid(row=7, column=1)
-                Button(root4, text="Kursi 16", command=lambda:hargaakhir("16 Ekonomi")).grid(row=8, column=1)
-                Button(root4, text="Kursi 17", command=lambda:hargaakhir("17 Ekonomi")).grid(row=1, column=3)
-                Button(root4, text="Kursi 18", command=lambda:hargaakhir("18 Ekonomi")).grid(row=2, column=3)
-                Button(root4, text="Kursi 19", command=lambda:hargaakhir("19 Ekonomi")).grid(row=3, column=3)
-                Button(root4, text="Kursi 20", command=lambda:hargaakhir("20 Ekonomi")).grid(row=4, column=3)
-                Button(root4, text="Kursi 21", command=lambda:hargaakhir("21 Ekonomi")).grid(row=5, column=3)
-                Button(root4, text="Kursi 22", command=lambda:hargaakhir("22 Ekonomi")).grid(row=6, column=3)
-                Button(root4, text="Kursi 23", command=lambda:hargaakhir("23 Ekonomi")).grid(row=7, column=3)
-                Button(root4, text="Kursi 24", command=lambda:hargaakhir("24 Ekonomi")).grid(row=8, column=3)
-                Button(root4, text="Kursi 25", command=lambda:hargaakhir("25 Ekonomi")).grid(row=1, column=4)
-                Button(root4, text="Kursi 26", command=lambda:hargaakhir("26 Ekonomi")).grid(row=2, column=4)
-                Button(root4, text="Kursi 27", command=lambda:hargaakhir("27 Ekonomi")).grid(row=3, column=4)
-                Button(root4, text="Kursi 28", command=lambda:hargaakhir("28 Ekonomi")).grid(row=4, column=4)
-                Button(root4, text="Kursi 29", command=lambda:hargaakhir("29 Ekonomi")).grid(row=5, column=4)
-                Button(root4, text="Kursi 30", command=lambda:hargaakhir("30 Ekonomi")).grid(row=6, column=4)
-                Button(root4, text="Kursi 31", command=lambda:hargaakhir("31 Ekonomi")).grid(row=7, column=4)
-                Button(root4, text="Kursi 32", command=lambda:hargaakhir("32 Ekonomi")).grid(row=8, column=4)
+                Button(root4, text="Kursi 01", command=lambda:hargaakhir("01-Ekonomi")).grid(row=1, column=0)
+                Button(root4, text="Kursi 02", command=lambda:hargaakhir("02-Ekonomi")).grid(row=2, column=0)
+                Button(root4, text="Kursi 03", command=lambda:hargaakhir("03-Ekonomi")).grid(row=3, column=0)
+                Button(root4, text="Kursi 04", command=lambda:hargaakhir("04-Ekonomi")).grid(row=4, column=0)
+                Button(root4, text="Kursi 05", command=lambda:hargaakhir("05-Ekonomi")).grid(row=5, column=0)
+                Button(root4, text="Kursi 06", command=lambda:hargaakhir("06-Ekonomi")).grid(row=6, column=0)
+                Button(root4, text="Kursi 07", command=lambda:hargaakhir("07-Ekonomi")).grid(row=7, column=0)
+                Button(root4, text="Kursi 08", command=lambda:hargaakhir("08-Ekonomi")).grid(row=8, column=0)
+                Button(root4, text="Kursi 09", command=lambda:hargaakhir("09-Ekonomi")).grid(row=1, column=1)
+                Button(root4, text="Kursi 10", command=lambda:hargaakhir("10-Ekonomi")).grid(row=2, column=1)
+                Button(root4, text="Kursi 11", command=lambda:hargaakhir("11-Ekonomi")).grid(row=3, column=1)
+                Button(root4, text="Kursi 12", command=lambda:hargaakhir("12-Ekonomi")).grid(row=4, column=1)
+                Button(root4, text="Kursi 13", command=lambda:hargaakhir("13-Ekonomi")).grid(row=5, column=1)
+                Button(root4, text="Kursi 14", command=lambda:hargaakhir("14-Ekonomi")).grid(row=6, column=1)
+                Button(root4, text="Kursi 15", command=lambda:hargaakhir("15-Ekonomi")).grid(row=7, column=1)
+                Button(root4, text="Kursi 16", command=lambda:hargaakhir("16-Ekonomi")).grid(row=8, column=1)
+                Button(root4, text="Kursi 17", command=lambda:hargaakhir("17-Ekonomi")).grid(row=1, column=3)
+                Button(root4, text="Kursi 18", command=lambda:hargaakhir("18-Ekonomi")).grid(row=2, column=3)
+                Button(root4, text="Kursi 19", command=lambda:hargaakhir("19-Ekonomi")).grid(row=3, column=3)
+                Button(root4, text="Kursi 20", command=lambda:hargaakhir("20-Ekonomi")).grid(row=4, column=3)
+                Button(root4, text="Kursi 21", command=lambda:hargaakhir("21-Ekonomi")).grid(row=5, column=3)
+                Button(root4, text="Kursi 22", command=lambda:hargaakhir("22-Ekonomi")).grid(row=6, column=3)
+                Button(root4, text="Kursi 23", command=lambda:hargaakhir("23-Ekonomi")).grid(row=7, column=3)
+                Button(root4, text="Kursi 24", command=lambda:hargaakhir("24-Ekonomi")).grid(row=8, column=3)
+                Button(root4, text="Kursi 25", command=lambda:hargaakhir("25-Ekonomi")).grid(row=1, column=4)
+                Button(root4, text="Kursi 26", command=lambda:hargaakhir("26-Ekonomi")).grid(row=2, column=4)
+                Button(root4, text="Kursi 27", command=lambda:hargaakhir("27-Ekonomi")).grid(row=3, column=4)
+                Button(root4, text="Kursi 28", command=lambda:hargaakhir("28-Ekonomi")).grid(row=4, column=4)
+                Button(root4, text="Kursi 29", command=lambda:hargaakhir("29-Ekonomi")).grid(row=5, column=4)
+                Button(root4, text="Kursi 30", command=lambda:hargaakhir("30-Ekonomi")).grid(row=6, column=4)
+                Button(root4, text="Kursi 31", command=lambda:hargaakhir("31-Ekonomi")).grid(row=7, column=4)
+                Button(root4, text="Kursi 32", command=lambda:hargaakhir("32-Ekonomi")).grid(row=8, column=4)
                 root4.mainloop()
 
             root3.grid_rowconfigure(0, weight=1)
@@ -449,17 +476,17 @@ i.place(x=0, y=50)
 
 
 
-button_continue = Button(root, text="Booking Tiket", bg='orange', font=("Arial", 12), compound="left", command=starter)
-button_continue.place(x=220, y=290, width=150, height=50) 
+button_continue = Button(root, text="Booking Tiket", bg='orange', font=("Times New Roman", 12), compound="left", command=starter)
+button_continue.place(x=220, y=320, width=150, height=50) 
 
-b = Button(root, text="Pilih Kelas", bg='light green', font=("Arial", 12), compound="left", command=kelas)
-b.place(x=420, y=290, width=150, height=50)  
+b = Button(root, text="Pilih Kelas", bg='light green', font=("Times New Roman", 12), compound="left",state=tk.DISABLED, command=kelas)
+b.place(x=420, y=320, width=150, height=50)  
 
-b1 = Button(root, text="Pembayaran", bg='light blue', font=("Arial", 12), compound="left",  command=pembayaran)
-b1.place(x=620, y=290, width=150, height=50)  
+b1 = Button(root, text="Pembayaran", bg='light blue', font=("Times New Roman", 12), compound="left", command=pembayaran)
+b1.place(x=620, y=320, width=150, height=50)  
 
-button_quit = Button(root, text='EXIT', bg='red', font=("Arial", 12), compound="left", command=root.quit)
-button_quit.place(x=820, y=290, width=150, height=50)  
+button_quit = Button(root, text='Exit', bg='red', font=("Times New Roman", 12), compound="left", command=root.quit)
+button_quit.place(x=820, y=320, width=150, height=50)  
 
 root.mainloop()
 
