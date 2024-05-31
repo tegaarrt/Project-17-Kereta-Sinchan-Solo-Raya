@@ -76,6 +76,7 @@ def load_tanggal_rute():
     else:
         messagebox.showerror("Error", "Tidak bisa memuat tanggal dan rute!")
 
+
 def print_eticket(image_path):
     printer_name = win32print.GetDefaultPrinter()
     os.startfile(image_path, "print", printer_name)
@@ -130,6 +131,7 @@ def submit_form():
         writer.writerow([nama, gender, email, tipe_kartu, nomor_kartu, nomor_hp, jumlah_pembayaran, kereta, tanggal_dan_rute])
     
     messagebox.showinfo("Sukses", "Pembayaran sudah berhasil dan telah disimpan!")
+    messagebox.showinfo("Informasi", "Simpan E-ticket anda saat akan berangkat")
     show_ticket(nama, jumlah_pembayaran, kereta,kursi, tanggal_dan_rute)
 
 
@@ -143,37 +145,7 @@ def submit_form():
     gender_var.set("Laki-Laki")
     card_type_combobox.set("Pilih Tipe Kartu")
 
-# def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
-#     e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta fix.png'
-#     original_image = Image.open(e_ticket_path)
-#     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
     
-#     draw = ImageDraw.Draw(resized_image)
-#     font = ImageFont.truetype("arial.ttf", 19)
-#     text_color = (0, 0, 0)
-
-#     draw.text((30, 130), f"Nama Penumpang     :   {nama}", font=font, fill=text_color)
-#     draw.text((30, 160), f"Jumlah Pembayaran  :   {jumlah_pembayaran}", font=font, fill=text_color)
-#     draw.text((30, 190), f"Keberangkatan      :   {kereta}", font=font, fill=text_color)
-#     draw.text((30, 220), f"Kursi dan Kelas    :   {kursi}", font=font, fill=text_color)
-#     draw.text((30, 250), f"Tanggal dan Rute     : {tanggal_dan_rute}", font=font, fill=text_color)
-
-
-   
-#     ticket_image = ImageTk.PhotoImage(resized_image)
-    
-#     ticket_window = tk.Toplevel(root)
-#     ticket_window.title("E-Ticket")
-#     ticket_frame = ttk.Frame(ticket_window, padding="20")
-#     ticket_frame.grid(row=0, column=0)
-
-#     image_label = ttk.Label(ticket_frame, image=ticket_image)
-#     image_label.image = ticket_image
-#     image_label.grid(row=0, column=0, columnspan=2, pady=(0, 10))
-
-#     ttk.Button(ticket_frame, text="Tutup", command=ticket_window.destroy).grid(row=1, column=0, columnspan=2, pady=(10, 0))
-    
-
 def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
     e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta fix.png'
     original_image = Image.open(e_ticket_path)
@@ -183,11 +155,11 @@ def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
     font = ImageFont.truetype("arial.ttf", 17)
     text_color = (0, 0, 0)
 
-    # Menentukan posisi dasar dan padding piksel
+  
     base_x = 30
     base_y = 130
     line_height = 30
-    colon_x = base_x + 210  # Posisi tetap untuk ":"
+    colon_x = base_x + 210  
 
     def draw_text(label, value, y):
        
@@ -216,7 +188,7 @@ def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
     image_label.image = ticket_image
     image_label.grid(row=0, column=0, columnspan=2, pady=(0, 10))
 
-    ttk.Button(ticket_frame, text="Tutup", command=ticket_window.destroy).grid(row=1, column=0, columnspan=2, pady=(10, 0))
+    ttk.Button(ticket_frame, text="Tutup", command=ticket_window.destroy and root.destroy).grid(row=1, column=0, columnspan=2, pady=(10, 0))
 
 
 root = tk.Tk()
@@ -251,9 +223,6 @@ male_radio.grid(row=4, column=1, sticky="w")
 female_radio = ttk.Radiobutton(main_frame, text="Perempuan", variable=gender_var, value="Perempuan")
 female_radio.grid(row=4, column=1, sticky="w", padx=(70, 0))
 
-# ttk.Label(main_frame, text="Umur").grid(row=5, column=0, sticky="e")
-# age_entry = ttk.Entry(main_frame)
-# age_entry.grid(row=5, column=1, sticky="w")
 
 ttk.Label(main_frame, text="Email ").grid(row=5, column=0, sticky="e")
 email_entry = ttk.Entry(main_frame)
@@ -301,3 +270,4 @@ kereta_berangkat()
 kursi()
 
 root.mainloop()
+

@@ -171,7 +171,7 @@ def starter():
             prabro_button.image = prabro_photo
             prabro_button.place(x=60, y=90, height=140, width=140)
             
-            janggar_button = tk.Button(root3, image=janggar_photo, command=lambda: harga("MUST A NICE EXPRESS (14:00)"),borderwidth=8, highlightthickness=6)
+            janggar_button = tk.Button(root3, image=janggar_photo, command=lambda: harga("JANGGAR TRAIN (14:00)"),borderwidth=8, highlightthickness=6)
             janggar_button.image = janggar_photo
             janggar_button.place(x=240, y=90, height=140, width=140)
         
@@ -207,9 +207,10 @@ def starter():
                             root4.destroy()
                             return starter()
                     root4.destroy()
-                
-                
-                b = Button(root4, text="TEKAN UNTUK KONFIRMASI PILIHAN", command=konfirmasi)
+                 
+                l = Label(root4, text="Harga Tiket Anda adalah : Rp. 10.000")
+                l.pack()
+                b = Button(root4, text="TEKAN UNTUK KONFIRMASI", command=konfirmasi)
                 b.pack()
             
             l = Label(root3, text="KERETA YANG TERSEDIA:")
@@ -257,7 +258,10 @@ def starter():
                     root4.destroy()
                 
                 
-                b = Button(root4, text="TEKAN UNTUK KONFIRMASI PILIHAN", command=konfirmasi)
+                 
+                l = Label(root4, text="Harga Tiket Anda adalah : Rp. 10.000")
+                l.pack()
+                b = Button(root4, text="TEKAN UNTUK KONFIRMASI", command=konfirmasi)
                 b.pack()
             
             l = Label(root3, text="KERETA YANG TERSEDIA:")
@@ -340,8 +344,6 @@ def kelas():
                 Button(root4, text="Kursi 06", command=lambda:hargaakhir("06-Bisnis")).grid(row=2, column=2)
                 Button(root4, text="Kursi 07", command=lambda:hargaakhir("07-Bisnis")).grid(row=3, column=2)
                 Button(root4, text="Kursi 08", command=lambda:hargaakhir("08-Bisnis")).grid(row=4, column=2)
-                b = Button(root4, text="NEXT").grid(row=6, column=1)
-                b.grid(row=3, column=0, columnspan=5)
                 root4.mainloop()
 
             def eksekutif():
@@ -385,8 +387,6 @@ def kelas():
                 Button(root4, text="Kursi 18", command=lambda:hargaakhir("18-Eksekutif")).grid(row=3, column=4)
                 Button(root4, text="Kursi 19", command=lambda:hargaakhir("19-Eksekutif")).grid(row=4, column=4)
                 Button(root4, text="Kursi 20", command=lambda:hargaakhir("20-Eksekutif")).grid(row=5, column=4)
-                b = Button(root4, text="NEXT").grid(row=6, column=2)
-                b.grid(row=3, column=0, columnspan=5)
                 root4.mainloop()
                 
             def ekonomi():
@@ -465,7 +465,7 @@ def kelas():
             b2 = tk.Button(root3, text="Eksekutif(+Rp. 10.000)", command=eksekutif, width=20, height=2,  bg='silver',borderwidth=6, highlightthickness=5)
             b2.place(x=300,y=80)
             b3 = tk.Button(root3, text="Ekonomi(+Rp. 5.000)", command=ekonomi, width=20, height=2, bg= 'silver',borderwidth=6, highlightthickness=5)
-            b3.place(x=210,y=140)
+            b3.place(x=210,y=160)
             root3.mainloop()
             
         
