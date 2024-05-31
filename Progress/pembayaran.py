@@ -143,23 +143,68 @@ def submit_form():
     gender_var.set("Laki-Laki")
     card_type_combobox.set("Pilih Tipe Kartu")
 
+# def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
+#     e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta fix.png'
+#     original_image = Image.open(e_ticket_path)
+#     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
+    
+#     draw = ImageDraw.Draw(resized_image)
+#     font = ImageFont.truetype("arial.ttf", 19)
+#     text_color = (0, 0, 0)
+
+#     draw.text((30, 130), f"Nama Penumpang     :   {nama}", font=font, fill=text_color)
+#     draw.text((30, 160), f"Jumlah Pembayaran  :   {jumlah_pembayaran}", font=font, fill=text_color)
+#     draw.text((30, 190), f"Keberangkatan      :   {kereta}", font=font, fill=text_color)
+#     draw.text((30, 220), f"Kursi dan Kelas    :   {kursi}", font=font, fill=text_color)
+#     draw.text((30, 250), f"Tanggal dan Rute     : {tanggal_dan_rute}", font=font, fill=text_color)
+
+
+   
+#     ticket_image = ImageTk.PhotoImage(resized_image)
+    
+#     ticket_window = tk.Toplevel(root)
+#     ticket_window.title("E-Ticket")
+#     ticket_frame = ttk.Frame(ticket_window, padding="20")
+#     ticket_frame.grid(row=0, column=0)
+
+#     image_label = ttk.Label(ticket_frame, image=ticket_image)
+#     image_label.image = ticket_image
+#     image_label.grid(row=0, column=0, columnspan=2, pady=(0, 10))
+
+#     ttk.Button(ticket_frame, text="Tutup", command=ticket_window.destroy).grid(row=1, column=0, columnspan=2, pady=(10, 0))
+    
+
 def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
     e_ticket_path = r'Project-17-Kereta-Sinchan-Solo-Raya\Tiket Kereta fix.png'
     original_image = Image.open(e_ticket_path)
     resized_image = original_image.resize((600, 400), Image.Resampling.LANCZOS)
     
     draw = ImageDraw.Draw(resized_image)
-    font = ImageFont.truetype("arial.ttf", 19)
+    font = ImageFont.truetype("arial.ttf", 17)
     text_color = (0, 0, 0)
 
-    draw.text((30, 130), f"Nama Penumpang     : {nama}", font=font, fill=text_color)
-    draw.text((30, 160), f"Jumlah Pembayaran  : {jumlah_pembayaran}", font=font, fill=text_color)
-    draw.text((30, 190), f"Keberangkatan      : {kereta}", font=font, fill=text_color)
-    draw.text((30, 220), f"Kursi dan Kelas    : {kursi}", font=font, fill=text_color)
-    draw.text((30, 250), f"Tanggal dan Rute   : {tanggal_dan_rute}", font=font, fill=text_color)
+    # Menentukan posisi dasar dan padding piksel
+    base_x = 30
+    base_y = 130
+    line_height = 30
+    colon_x = base_x + 210  # Posisi tetap untuk ":"
 
+    def draw_text(label, value, y):
+       
+        draw.text((base_x, y), label, font=font, fill=text_color)
+        
+        draw.text((colon_x, y), ":", font=font, fill=text_color)
+       
+        value_x = colon_x + 10  
+        draw.text((value_x, y), value, font=font, fill=text_color)
 
-   
+    # Menggunakan fungsi draw_text untuk setiap baris
+    draw_text("Nama Penumpang", nama, base_y)
+    draw_text("Jumlah Pembayaran", jumlah_pembayaran, base_y + line_height)
+    draw_text("Keberangkatan", kereta, base_y + 2 * line_height)
+    draw_text("Kursi dan Kelas", kursi, base_y + 3 * line_height)
+    draw_text("Tanggal dan Rute", tanggal_dan_rute, base_y + 4 * line_height)
+
     ticket_image = ImageTk.PhotoImage(resized_image)
     
     ticket_window = tk.Toplevel(root)
@@ -172,7 +217,6 @@ def show_ticket(nama, jumlah_pembayaran, kereta, kursi, tanggal_dan_rute):
     image_label.grid(row=0, column=0, columnspan=2, pady=(0, 10))
 
     ttk.Button(ticket_frame, text="Tutup", command=ticket_window.destroy).grid(row=1, column=0, columnspan=2, pady=(10, 0))
-    
 
 
 root = tk.Tk()
